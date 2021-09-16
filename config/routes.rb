@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   # Add A3 work below
 
   get "/assignments/a3Lawrence", to: "assignments#a3Lawrence"
-  get "/assignments/a3ThanhQuan", to: "assignments#a3ThanhQuan"
 
   # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
-  get "/assignments/a4ThanhQuan", to: "assignments#a4ThanhQuan"
 end
