@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   # root "assignments#index"
 
   get "/assignments", to: "assignments#index"
+
+  # Add A3 work below
+
   get "/assignments/a3Lawrence", to: "assignments#a3Lawrence"
+
+  # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
 end
