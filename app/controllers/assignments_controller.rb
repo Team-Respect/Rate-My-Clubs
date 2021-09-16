@@ -4,4 +4,7 @@ class AssignmentsController < ApplicationController
 
   def a3Lawrence
   end
+  
+  def a3ThanhQuan
+  end
 end
