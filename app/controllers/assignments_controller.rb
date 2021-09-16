@@ -6,6 +6,9 @@ class AssignmentsController < ApplicationController
 
   def a3Lawrence
   end
+  
+  def a3ThanhQuan
+  end
 
 
   # Add A4 work below
