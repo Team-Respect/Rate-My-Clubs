@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get "/assignments", to: "assignments#index"
   get "/assignments/a3Lawrence", to: "assignments#a3Lawrence"
+
+  get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
 end
