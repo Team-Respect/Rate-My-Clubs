@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   get "/assignments/a3ThanhQuan", to: "assignments#a3ThanhQuan"
 
+  get "/assignments/a3Minkyu", to: "assignments#a3Minkyu"
+
   # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
