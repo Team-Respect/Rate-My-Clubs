@@ -13,6 +13,9 @@ class AssignmentsController < ApplicationController
   def a3Minkyu
   end
 
+  def a3Max
+  end
+
 
   # Add A4 work below
 
