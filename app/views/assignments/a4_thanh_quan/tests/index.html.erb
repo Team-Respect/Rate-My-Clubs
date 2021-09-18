@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Image Upload Testing</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignments_a4_thanh_quan_tests.each do |assignments_a4_thanh_quan_test| %>
+      <tr>
+        <td><img src = "<%= assignments_a4_thanh_quan_test.image %>"></td>
+        <td><%= link_to 'Show', assignments_a4_thanh_quan_test %></td>
+        <td><%= link_to 'Edit', edit_assignments_a4_thanh_quan_test_path(assignments_a4_thanh_quan_test) %></td>
+        <td><%= link_to 'Destroy', assignments_a4_thanh_quan_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test', new_assignments_a4_thanh_quan_test_path %>

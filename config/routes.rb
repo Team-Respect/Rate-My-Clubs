@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :assignments do
+    namespace :a4_thanh_quan do
+      resources :tests
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # root "assignments#index"
 
@@ -17,4 +22,6 @@ Rails.application.routes.draw do
   # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
+  
+  get "/assignments/a4ThanhQuan", to: "assignments#a4ThanhQuan"
 end
