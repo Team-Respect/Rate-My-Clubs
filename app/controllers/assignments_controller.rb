@@ -21,6 +21,9 @@ class AssignmentsController < ApplicationController
 
   def a4Lawrence
   end
+  
+  def a4ThanhQuan
+  end
 
   def a4Max
   end

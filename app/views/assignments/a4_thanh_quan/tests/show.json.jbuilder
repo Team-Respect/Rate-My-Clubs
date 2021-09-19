@@ -1,0 +1,1 @@
+json.partial! "assignments_a4_thanh_quan_tests/assignments_a4_thanh_quan_test", assignments_a4_thanh_quan_test: @assignments_a4_thanh_quan_test
