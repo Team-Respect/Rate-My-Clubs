@@ -6,7 +6,7 @@ ruby '2.7.2'
 # Our Gems:
 
 gem 'react-rails'
-
+gem 'unicode-display_width', '~> 2.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
