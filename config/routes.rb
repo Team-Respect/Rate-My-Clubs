@@ -24,4 +24,8 @@ Rails.application.routes.draw do
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
   
   get "/assignments/a4ThanhQuan", to: "assignments#a4ThanhQuan"
+  
+  get "/assignments/a4Max", to: "assignments#a4Max"
+
 end
+  
