@@ -27,5 +27,7 @@ Rails.application.routes.draw do
   
   get "/assignments/a4Max", to: "assignments#a4Max"
 
+  get "/assignments/a4Minkyu", to: "assignments#a4Minkyu"
+
 end
   
