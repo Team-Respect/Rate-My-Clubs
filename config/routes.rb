@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
+
+  get "/assignments/a4Max", to: "assignments#a4Max"
 end
+  
