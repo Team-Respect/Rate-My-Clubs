@@ -1,0 +1,11 @@
+<p>Library in use: Faraday</p>
+<p>The library has the method call get to request a website that the user wants to use</p>
+<p>The website: 'http://httpbingo.org'</p>
+<p>The output that the user wants (In this case, the header of 'http://httpbingo.org'): response.headers</p>
+
+<%= require 'faraday'
+
+response = Faraday.get 'http://httpbingo.org'
+
+response.headers
+ %>
