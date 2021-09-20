@@ -28,4 +28,7 @@ class AssignmentsController < ApplicationController
   def a4Max
   end
 
+  def a4Minkyu
+  end
+
 end
