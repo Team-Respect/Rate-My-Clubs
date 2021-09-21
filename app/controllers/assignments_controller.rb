@@ -16,6 +16,9 @@ class AssignmentsController < ApplicationController
   def a3Max
   end
 
+  def a3Cynthia
+  end
+
 
   # Add A4 work below
 

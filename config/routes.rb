@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get "/assignments/a3Max", to: "assignments#a3Max"
 
+  get "/assignments/a3Cynthia", to: "assignments#a3Cynthia"
+
   # Add A4 work below
 
   get "/assignments/a4Lawrence", to: "assignments#a4Lawrence"
