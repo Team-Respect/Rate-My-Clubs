@@ -31,5 +31,7 @@ Rails.application.routes.draw do
 
   get "/assignments/a4Minkyu", to: "assignments#a4Minkyu"
 
+  get "/assignments/a4Cynthia", to: "assignments#a4Cynthia"
+
 end
   

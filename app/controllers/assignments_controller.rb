@@ -34,4 +34,7 @@ class AssignmentsController < ApplicationController
   def a4Minkyu
   end
 
+  def a4Cynthia
+  end
+
 end
