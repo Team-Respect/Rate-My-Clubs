@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   # Home page route
 
-  root "home"
+  root "home#index"
 
   get 'home/index'
 
@@ -42,4 +42,3 @@ Rails.application.routes.draw do
   get "/assignments/a4Cynthia", to: "assignments#a4Cynthia"
 
 end
-  
