@@ -5,7 +5,15 @@ Rails.application.routes.draw do
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root "assignments#index"
+  #root "assignments#index"
+  
+  # Home page route
+
+  root "home#index"
+
+  get 'home/index'
+
+  # Assignments route
 
   get "/assignments", to: "assignments#index"
 
@@ -34,4 +42,3 @@ Rails.application.routes.draw do
   get "/assignments/a4Cynthia", to: "assignments#a4Cynthia"
 
 end
-  
