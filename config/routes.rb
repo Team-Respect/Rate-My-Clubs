@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  get 'home/index'
+  # About page route
+
+  get '/about', to: "about#index"
 
   # Assignments route
 
