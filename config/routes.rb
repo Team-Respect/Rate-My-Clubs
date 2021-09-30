@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   get '/login', to: "login#index"
 
+  # Forgot Password page route
+
+  get '/password/forgot', to: "password#index"
+
   # We are not using the below anymore
   # Assignments route
 
