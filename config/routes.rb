@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   get '/sign_up', to: "sign_up#index"
 
+  # Sign Up page route
+
+  get '/login', to: "login#index"
+
   # We are not using the below anymore
   # Assignments route
 
