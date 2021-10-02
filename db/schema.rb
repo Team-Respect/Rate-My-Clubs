@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2021_10_01_234509) do
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "usernamee"
   end
 
   add_foreign_key "clubs", "users"
