@@ -10,6 +10,7 @@
 
   <% if usermanagement_signed_in? %>
     <div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_usermanagement_session_path, method: :delete %></div>
+    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', clubs_path %></div>
   <% else %>
     <div style = "float: right" href="Login"><%= link_to 'Login', new_usermanagement_session_path %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_usermanagement_registration_path %></div>
