@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  rating: 1.5
+  overall_rating: 1.5
 
 two:
   name: MyString
-  rating: 1.5
+  overall_rating: 1.5
