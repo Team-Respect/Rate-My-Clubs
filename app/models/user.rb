@@ -8,7 +8,6 @@ class User < ApplicationRecord
   # devise :database_authenticatable, :registerable,
   #       :recoverable, :rememberable, :validatable
   has_many :ratings
-  has_many :clubs # Just to prevent trolling, might not implement
 
   # Add validations here
   # Ex: uniqueness for email/username?
