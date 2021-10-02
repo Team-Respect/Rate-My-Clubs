@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2021_10_02_211815) do
     t.float "overall_rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_clubs_on_user_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_10_02_211815) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "clubs", "users"
   add_foreign_key "ratings", "clubs"
   add_foreign_key "ratings", "users"
 end
