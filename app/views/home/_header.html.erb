@@ -2,9 +2,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href"header.scss">
-<link rel="stylesheet" href"sign_up.scss">
-<link rel="stylesheet" href"login.scss">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
@@ -13,6 +10,7 @@
 
   <% if usermanagement_signed_in? %>
     <div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_usermanagement_session_path, method: :delete %></div>
+    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', clubs_path %></div>
   <% else %>
     <div style = "float: right" href="Login"><%= link_to 'Login', new_usermanagement_session_path %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_usermanagement_registration_path %></div>

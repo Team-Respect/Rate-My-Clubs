@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :usermanagements
-  devise_for :users
-  namespace :assignments do
-    namespace :a4_thanh_quan do
-      resources :tests
-    end
-  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #root "assignments#index"
   
   # Home page route
 
@@ -28,6 +20,16 @@ Rails.application.routes.draw do
   # Forgot Password page route
 
   get '/password/forgot', to: "password#index"
+
+  # User authentication
+  devise_for :usermanagements
+  devise_for :users
+
+  # Clubs
+  # Basic CRUD operations
+  resources :clubs
+
+  get '/clubs', to: "clubs#index"
 
   # We are not using the below anymore
   # Assignments route
@@ -57,5 +59,11 @@ Rails.application.routes.draw do
   get "/assignments/a4Minkyu", to: "assignments#a4Minkyu"
 
   get "/assignments/a4Cynthia", to: "assignments#a4Cynthia"
+
+  namespace :assignments do
+    namespace :a4_thanh_quan do
+      resources :tests
+    end
+  end
 
 end
