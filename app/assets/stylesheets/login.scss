@@ -1,3 +1,154 @@
-// Place all the styles related to the Login controller here.
+// Place all the styles related to the SignUp controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.signin {
+    margin: 20px auto;
+    width: 343px; 
+    height: 643px; 
+    -webkit-border-radius: 8px/7px; 
+    -moz-border-radius: 8px/7px; 
+    border-radius: 8px/7px; 
+    background-color: black; 
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    border: solid 1px #cbc9c9;
+    color: white;
+}
+body,
+input,
+textarea,
+select {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #4c4c4c;
+}
+p {
+    font-size: 12px;
+    width: 150px;
+    display: inline-block;
+    margin-left: 18px;
+  }
+h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+form{
+    margin: 0 30px;
+}
+.field {
+    padding: 10px;
+    text-align: center;
+}
+a {
+    color: white;
+    padding-bottom: 10px;
+}
+.actions {
+    margin-bottom: 10px;
+}
+input[type=text], input[type=password], input[type=email]  {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.alreadyhaveaccount {
+    padding-left: 50px;
+    position: relative;
+    top: 2%;
+}
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  .loginbutton {
+    position: relative;
+    left: 18%;
+    padding: 5px 60px 5px 60px;
+  }
+  div.loginbutton {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    padding: 6px 25px 0px 20px;
+    margin: -10px 3px 15px 70px;
+    display: inline-block;
+    text-decoration: none;
+    width: 50px; height: 27px; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    transition: all 0.1s linear 0s; 
+    top: 0px;
+    position: relative;
+  }
+
+  div.loginbutton:hover {
+    top: 3px;
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none;
+    
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  .clearfix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Clear floats */
+  .clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+    text-align: center;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  .needtocreateaccount {
+    position: relative;
+    left: 20%;
+  }
+  .forgotpassword {
+      position: relative;
+      left: 25%;
+  }

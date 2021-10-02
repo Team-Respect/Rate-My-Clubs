@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :usermanagements
+  devise_for :users
   namespace :assignments do
     namespace :a4_thanh_quan do
       resources :tests
