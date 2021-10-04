@@ -1,9 +1,9 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Alreay have an account? Log in", new_session_path(resource_name), class: "alreadyhaveaccount" %><br />
+  <%= link_to "Sign in instead", new_session_path(resource_name), class: "alreadyhaveaccount" %><br />
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Need to create an account?", new_registration_path(resource_name), class: "needtocreateaccount"%><br />
+  <%= link_to "Create an account", new_registration_path(resource_name), class: "needtocreateaccount"%><br />
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
