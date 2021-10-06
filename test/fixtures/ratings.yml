@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  overall_rating: 1.5
+  general_rating: 1.5
   description: MyText
   school_year: MyString
 
 two:
-  overall_rating: 1.5
+  general_rating: 1.5
   description: MyText
   school_year: MyString
