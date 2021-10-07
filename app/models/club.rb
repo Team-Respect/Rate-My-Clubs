@@ -6,6 +6,8 @@ class Club < ApplicationRecord
   validates :name, uniqueness: true, length: { minimum: 5 }
 
   # Validate that the overall rating is a number between 1 and 5
-  validates_inclusion_of :overall_rating, :in => 1..5
+
+  # NOTE: Removed since users should not be able to edit this default value.
+  # validates_inclusion_of :overall_rating, :in => 1..5
 
 end
