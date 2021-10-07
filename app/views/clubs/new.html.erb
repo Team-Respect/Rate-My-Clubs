@@ -1,5 +1,9 @@
 <h1>New Club</h1>
 
-<%= render 'form', club: @club %>
+<% if usermanagement_signed_in? %>
+  <%= render 'form', club: @club %>
+<% else %>
+  <p>You must be logged in to create clubs!</p>
+<% end %>
 
 <%= link_to 'Back', clubs_path %>
