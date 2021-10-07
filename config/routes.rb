@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   # Categories
   resources :categories
 
+  # Ratings
+
   # We are not using the below anymore
   # Assignments route
 
