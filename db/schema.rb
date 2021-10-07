@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 2021_10_07_040446) do
     t.string "school_year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.integer "club_id", null: false
+    t.index ["club_id"], name: "index_ratings_on_club_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "usermanagements", force: :cascade do |t|
@@ -62,4 +66,6 @@ ActiveRecord::Schema.define(version: 2021_10_07_040446) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "ratings", "clubs"
+  add_foreign_key "ratings", "users"
 end

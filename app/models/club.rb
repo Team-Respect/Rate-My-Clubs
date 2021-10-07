@@ -1,9 +1,7 @@
 class Club < ApplicationRecord
   # Validate that the club name and overall rating are not empty.
-  validates :name, :overall_rating, presence: true
-
-  # Validate that the club name is not duplicated, or less than 5 characters.
-  validates :name, uniqueness: true, length: { minimum: 5 }
+    # Validate that the club name is not duplicated, or less than 5 characters.
+  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
 
   # Validate that the overall rating is a number between 1 and 5
 
