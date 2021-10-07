@@ -14,8 +14,10 @@
 
   <tbody>
     <% @clubs.each do |club| %>
-      <tr>
-        <td><%= club.name %></td>
+      <tr class="clubs-tr" data-link= "<%= club_path(club.id) %>">
+        <td>
+          <%= club.name %>
+        </td>
         <td>
           <%= 
             if club.overall_rating == -1 
@@ -26,10 +28,16 @@
           %>
           <td><%= Category.find(club.category_id).name %></td>
         </td>
-        <td><%= link_to 'Show', club %></td>
+
+        <!-- Go to club page link. Not needed anymore since users can just click on the table row to navigate there now.
+        <td><%= link_to 'Show', club %></td>-->
         <!--<td><%= link_to 'Edit', edit_club_path(club) %></td> Users should not be able to update clubs-->
         <!--Remove the next line to not allow users to delete clubs either -->
+        <!--
+        Moving the Destroy link to the club page. Users will not have this feature in production, but it is kept here for testing purposes.
         <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
+
       </tr>
     <% end %>
   </tbody>
@@ -37,4 +45,10 @@
 
 <br>
 
+<!-- Required JavaScript file import "home.js" located in app/javascript/packs -->
+<%= javascript_pack_tag 'home' %>
+
+<!--
+Only logged in users can create clubs. Leaving this here for reference.
 <%= link_to 'New Club', new_club_path %>
+-->

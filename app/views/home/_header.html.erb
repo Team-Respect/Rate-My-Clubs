@@ -10,14 +10,15 @@
 
   <% if usermanagement_signed_in? %>
     <div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_usermanagement_session_path, method: :delete %></div>
-    <div style = "float: right" href="Create Category"><%= link_to 'Create Category', categories_path %></div>
-    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', clubs_path %></div>
+    <div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path %></div>
+    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path %></div>
   <% else %>
     <div style = "float: right" href="Login"><%= link_to 'Login', new_usermanagement_session_path %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_usermanagement_registration_path %></div>
   <% end %>
   <div style = "color: white" href="Logo"><%= link_to 'Logo', root_path %></div>
   <div style = "color: white" href="About"><%= link_to 'About', about_path %></div>
+  <div style = "color: white" href="Club Categories"><%= link_to 'Club Categories', categories_path %></div>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search for Club" name="search">

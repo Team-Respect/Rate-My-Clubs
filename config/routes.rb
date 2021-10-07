@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   # Home page route
 
-  root "home#index"
+  root "clubs#index"
 
   # About page route
 
