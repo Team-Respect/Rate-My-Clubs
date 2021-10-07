@@ -16,6 +16,11 @@
   %>
 </p>
 
+<p>
+  <strong>Category:</strong>
+  <%= Category.find(@club.category_id).name %>
+</p>
+
 <!-- Do not allow users to edit clubs -->
 <!--<%= link_to 'Edit', edit_club_path(@club) %> |-->
 <%= link_to 'Back', clubs_path %>

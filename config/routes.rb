@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :categories
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
   # Home page route
@@ -31,6 +30,9 @@ Rails.application.routes.draw do
   resources :clubs
 
   get '/clubs', to: "clubs#index"
+
+  # Categories
+  resources :categories
 
   # We are not using the below anymore
   # Assignments route

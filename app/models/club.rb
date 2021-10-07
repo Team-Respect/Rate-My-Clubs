@@ -8,4 +8,5 @@ class Club < ApplicationRecord
   # NOTE: Removed since users should not be able to edit this default value.
   # validates_inclusion_of :overall_rating, :in => 1..5
 
+  belongs_to :category
 end
