@@ -14,8 +14,10 @@
 
   <tbody>
     <% @clubs.each do |club| %>
-      <tr>
-        <td><%= club.name %></td>
+      <tr data-link= "<%= club_path(club.id) %>">
+        <td>
+          <%= club.name %>
+        </td>
         <td>
           <%= 
             if club.overall_rating == -1 
@@ -37,4 +39,9 @@
 
 <br>
 
+<%= javascript_pack_tag 'home' %>
+
+<!--
+Only logged in users can create clubs. Leaving this here for reference.
 <%= link_to 'New Club', new_club_path %>
+-->
