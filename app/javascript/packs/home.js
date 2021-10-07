@@ -1,3 +1,3 @@
-$(document).on('click', "tr[data-link]", function() {
-  alert ('hello');
+$("tr[data-link]").on( "click", function() {
+  window.location = $(this).data("link");
 });

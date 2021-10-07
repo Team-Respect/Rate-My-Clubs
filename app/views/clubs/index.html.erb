@@ -14,7 +14,7 @@
 
   <tbody>
     <% @clubs.each do |club| %>
-      <tr data-link= "<%= club_path(club.id) %>">
+      <tr class="clubs-tr" data-link= "<%= club_path(club.id) %>">
         <td>
           <%= club.name %>
         </td>
