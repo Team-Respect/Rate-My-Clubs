@@ -24,7 +24,7 @@
               club.overall_rating
             end
           %>
-          <td><%= Category.find(club.id).name %></td>
+          <td><%= Category.find(club.category_id).name %></td>
         </td>
         <td><%= link_to 'Show', club %></td>
         <!--<td><%= link_to 'Edit', edit_club_path(club) %></td> Users should not be able to update clubs-->
