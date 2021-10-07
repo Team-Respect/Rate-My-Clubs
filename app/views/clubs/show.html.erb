@@ -7,7 +7,13 @@
 
 <p>
   <strong>Overall rating:</strong>
-  <%= @club.overall_rating %>
+  <%= 
+    if @club.overall_rating == -1 
+      "N/A"
+    else
+      @club.overall_rating
+    end
+  %>
 </p>
 
 <!-- Do not allow users to edit clubs -->
