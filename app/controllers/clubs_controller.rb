@@ -64,6 +64,6 @@ class ClubsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def club_params
-      params.require(:club).permit(:name, :overall_rating)
+      params.require(:club).permit(:name, :overall_rating, :category_id)
     end
 end
