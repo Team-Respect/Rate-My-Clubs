@@ -15,7 +15,15 @@
     <% @clubs.each do |club| %>
       <tr>
         <td><%= club.name %></td>
-        <td><%= club.overall_rating %></td>
+        <td>
+          <%= 
+            if club.overall_rating == -1 
+              "N/A"
+            else
+              club.overall_rating
+            end
+          %>
+        </td>
         <td><%= link_to 'Show', club %></td>
         <!--<td><%= link_to 'Edit', edit_club_path(club) %></td> Users should not be able to update clubs-->
         <!--Remove the next line to not allow users to delete clubs either -->
