@@ -30,7 +30,11 @@
 <h2>Ratings</h2>
 <%= render @club.ratings %>
 
-<h2>Add a rating:</h2>
-<%= render 'ratings/form' %>
+<% if usermanagement_signed_in? %>
+  <h2>Add a rating:</h2>
+  <%= render 'ratings/form' %>
+<% else %>
+  <p>Sign in to create ratings.</p> <br />
+<% end %>
 
 <%= link_to 'Back', clubs_path %>
