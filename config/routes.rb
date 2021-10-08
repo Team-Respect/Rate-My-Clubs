@@ -20,17 +20,13 @@ Rails.application.routes.draw do
   devise_for :usermanagements
   devise_for :users
 
-  # Clubs
-  # Basic CRUD operations
-  resources :clubs
-
-  get '/clubs', to: "clubs#index"
+  # Clubs and Ratings
+  resources :clubs do
+    resources :ratings
+  end
 
   # Categories
   resources :categories
-
-  # Ratings
-  resources :ratings
 
   # We are not using the below anymore
   # Assignments route

@@ -9,4 +9,5 @@ class Club < ApplicationRecord
   # validates_inclusion_of :overall_rating, :in => 1..5
 
   belongs_to :category
+  has_many :ratings, dependent: :destroy
 end

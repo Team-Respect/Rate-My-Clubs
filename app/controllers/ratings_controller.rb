@@ -12,7 +12,10 @@ class RatingsController < ApplicationController
 
   # GET /ratings/new
   def new
+    #@user = params[:user_id] # or @user = current_user, but you need to get a user
+    #@rating = @user.rating.build
     @rating = Rating.new
+    @rating = current_user.ratings.build
   end
 
   # GET /ratings/1/edit
@@ -21,14 +24,16 @@ class RatingsController < ApplicationController
 
   # POST /ratings or /ratings.json
   def create
-    @rating = Rating.new(rating_params)
+    @club = Club.find(params[:club_id])
+    @rating = @club.ratings.create(rating_params)
 
     respond_to do |format|
       if @rating.save
-        format.html { redirect_to @rating, notice: "Rating was successfully created." }
+        format.html { redirect_to club_path(@club), notice: "Rating was successfully created." }
         format.json { render :show, status: :created, location: @rating }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        #format.html { render :new, status: :unprocessable_entity }
+        format.html { redirect_to club_path(@club), notice: @rating.errors.full_messages.to_sentence }
         format.json { render json: @rating.errors, status: :unprocessable_entity }
       end
     end
@@ -49,9 +54,12 @@ class RatingsController < ApplicationController
 
   # DELETE /ratings/1 or /ratings/1.json
   def destroy
+    @club = Club.find(params[:club_id])
+    @rating = @club.ratings.find(params[:id])
+
     @rating.destroy
     respond_to do |format|
-      format.html { redirect_to ratings_url, notice: "Rating was successfully destroyed." }
+      format.html { redirect_to club_path(@club), notice: "Rating was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -64,6 +72,6 @@ class RatingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rating_params
-      params.fetch(:rating, {})
+      params.require(:rating).permit(:general_rating, :description, :club_id)
     end
 end
