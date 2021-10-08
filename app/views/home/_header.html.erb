@@ -10,9 +10,8 @@
 
   <% if user_signed_in? %>
     <div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
-    <div style = "float: right" href="Show Username"><%= current_user.username %></div>
     <div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path %></div>
-    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path %></div>    
+    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path %></div>
   <% else %>
     <div style = "float: right" href="Login"><%= link_to 'Login', new_user_session_path %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_user_registration_path %></div>
