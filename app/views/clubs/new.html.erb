@@ -1,6 +1,6 @@
 <h1>New Club</h1>
 
-<% if user_signed_in? %>
+<% if usermanagement_signed_in? %>
   <%= render 'form', club: @club %>
 <% else %>
   <p>You must be logged in to create clubs!</p>

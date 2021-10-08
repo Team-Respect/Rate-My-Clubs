@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/password/forgot', to: "password#index"
 
   # User authentication
+  devise_for :usermanagements
   devise_for :users
 
   # Clubs and Ratings
