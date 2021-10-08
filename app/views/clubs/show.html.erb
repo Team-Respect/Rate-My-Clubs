@@ -25,4 +25,12 @@
 
 <!-- Do not allow users to edit clubs -->
 <!--<%= link_to 'Edit', edit_club_path(@club) %> |-->
+
+<!-- Ratings -->
+<h2>Ratings</h2>
+<%= render @club.ratings %>
+
+<h2>Add a rating:</h2>
+<%= render 'ratings/form' %>
+
 <%= link_to 'Back', clubs_path %>

@@ -1,9 +1,9 @@
 class Rating < ApplicationRecord
-  belongs_to :user
+  #belongs_to :user
   belongs_to :club
 
   # Validate that the general rating, description, and school year are not empty.
-  validates :general_rating, :description, :school_year, presence: true
+  validates :general_rating, :description, presence: true
 
   # Validate that the description are not duplicate.
   validates :description, uniqueness: true

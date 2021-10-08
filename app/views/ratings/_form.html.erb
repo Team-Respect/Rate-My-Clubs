@@ -1,0 +1,27 @@
+<%= form_with model: [ @club, @club.ratings.build ] do |form| %>
+  <% if @club.ratings.build.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@club.ratings.build.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+        <% @club.ratings.build.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :general_rating %>
+    <%= form.text_field :general_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %><br />
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

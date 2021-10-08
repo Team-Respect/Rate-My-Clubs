@@ -1,0 +1,17 @@
+<p>
+  <strong>Rating:</strong>
+  <%= rating.general_rating %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= rating.description %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Rating', [rating.club, rating],
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+</p>
+
+<br />

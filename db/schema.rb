@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_07_061446) do
+ActiveRecord::Schema.define(version: 2021_10_08_003151) do
 
   create_table "assignments_a4_thanh_quan_tests", force: :cascade do |t|
     t.string "image"
@@ -37,13 +37,10 @@ ActiveRecord::Schema.define(version: 2021_10_07_061446) do
   create_table "ratings", force: :cascade do |t|
     t.float "general_rating"
     t.text "description"
-    t.string "school_year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id", null: false
     t.integer "club_id", null: false
     t.index ["club_id"], name: "index_ratings_on_club_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "usermanagements", force: :cascade do |t|
@@ -69,5 +66,4 @@ ActiveRecord::Schema.define(version: 2021_10_07_061446) do
 
   add_foreign_key "clubs", "categories"
   add_foreign_key "ratings", "clubs"
-  add_foreign_key "ratings", "users"
 end
