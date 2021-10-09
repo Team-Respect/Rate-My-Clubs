@@ -6,7 +6,7 @@ class RatingTest < ActiveSupport::TestCase
   # end
 
   test "description should not be blank to be saved" do
-    club = Rating.new
+    rating = Rating.new
     assert_not rating.save, "blank description saved"
   end
 end
