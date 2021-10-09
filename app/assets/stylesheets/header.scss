@@ -10,6 +10,15 @@ body {
   background-color: #39363B;
 }
 
+.show_username {
+  float: right;
+  display: block;
+  color: white;
+  font-size: 17px;
+  margin-top: 15px;
+  padding: 0px 5px 0px 5px;
+}
+
 .topnav a {
   float: left;
   display: block;
@@ -28,10 +37,6 @@ body {
 .topnav a.active {
   background-color: #2196F3;
   color: white;
-}
-
-.topnav .search-container {
-
 }
 
 .topnav input[type=text] {
