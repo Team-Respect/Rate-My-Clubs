@@ -15,7 +15,7 @@ class RatingsController < ApplicationController
     #@user = params[:user_id] # or @user = current_user, but you need to get a user
     #@rating = @user.rating.build
     @rating = Rating.new
-    @rating = current_user.ratings.build
+    #@rating = current_user.ratings.build
   end
 
   # GET /ratings/1/edit
