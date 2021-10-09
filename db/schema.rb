@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_08_003151) do
+ActiveRecord::Schema.define(version: 2021_10_09_002348) do
 
   create_table "assignments_a4_thanh_quan_tests", force: :cascade do |t|
     t.string "image"
@@ -54,14 +54,6 @@ ActiveRecord::Schema.define(version: 2021_10_08_003151) do
     t.string "username"
     t.index ["email"], name: "index_usermanagements_on_email", unique: true
     t.index ["reset_password_token"], name: "index_usermanagements_on_reset_password_token", unique: true
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "clubs", "categories"
