@@ -8,6 +8,9 @@ class Rating < ApplicationRecord
   # Validate that the description are not duplicate.
   validates :description, uniqueness: true
 
+  # Validate that the description are maximum 500 characters.
+  validates :description, length: { maximum: 500 }
+
   # Validate general rating is a number between 1 and 5
   validates_inclusion_of :general_rating, :in => 1..5
 
