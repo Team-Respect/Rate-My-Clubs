@@ -21,7 +21,9 @@
       <%= form.label :category %>
       <br>
       <br />
-      <%= form.collection_select(:category_id, Category.all, :id, :name) %>
+      <div class="club-form-category-select">
+        <%= form.collection_select(:category_id, Category.all, :id, :name) %>
+      </div>
     </div>
 
     <div class="actions">
