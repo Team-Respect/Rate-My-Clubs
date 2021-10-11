@@ -9,3 +9,8 @@ two:
   username: MyString
   email: MyString
   password: MyString
+
+test01:
+  id: 1
+  email: test01@gmail.com
+  encrypted_password <%= User.new.send(:password_digest, '123456') %>
