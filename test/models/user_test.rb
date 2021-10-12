@@ -5,8 +5,8 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test "cannot create user without a name" do
+  test "cannot save user without a username" do
     user = User.new
-    assert_not user.save, "blank user saved"
+    assert_not user.save, "saved user without a username"
   end
 end
