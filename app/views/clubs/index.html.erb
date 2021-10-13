@@ -1,34 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clubs</h1>
+<h1>Rate My Clubs</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Overall rating</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @clubs.each do |club| %>
       <tr class="clubs-tr" data-link= "<%= club_path(club.id) %>">
-        <td>
-          <%= club.name %>
-        </td>
-        <td>
-          <%= 
-            if club.overall_rating == -1 
-              "N/A"
-            else
-              club.overall_rating
-            end
-          %>
-          <td><%= Category.find(club.category_id).name %></td>
-        </td>
-
+        <div class="content-container">
+          <div class="home-background">
+            <div class="club-container">
+              <div class ="column">
+                <p class="overall-rating"><%= 
+                if club.overall_rating == -1 
+                  "N/A"
+                else
+                  club.overall_rating
+                end
+              %></p>
+                <p class= "number-rating">15 ratings</p>
+              </div>
+              <div class="column">
+                <p class="club-name"><%= club.name %></p>
+                <p class="category-name"><%= Category.find(club.category_id).name %></p>
+              </div>
+              <div class="other-ratings">
+                <div class= "pair-1">
+                  <p class="rating">5.0</p>
+                  <p class= "rating-metric">Rating Metric 1</p>
+                </div>
+                <div class="pair-2">
+                  <p class="rating">5.0</p>
+                  <p class= "rating-metric">Rating Metric 2</p>
+                </div>
+                <div class="pair-3">
+                  <p class="rating">5.0</p>
+                  <p class= "rating-metric">Rating Metric 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="space"> </p>
+      
         <!-- Go to club page link. Not needed anymore since users can just click on the table row to navigate there now.
         <td><%= link_to 'Show', club %></td>-->
         <!--<td><%= link_to 'Edit', edit_club_path(club) %></td> Users should not be able to update clubs-->
@@ -40,7 +54,30 @@
 
       </tr>
     <% end %>
+    <div class="category-list">
+          <div class="category-background">
+            <h2 class="category-heading">Categories</h2>
+            <div class="category-container">
+              <input type="checkbox" class="category" name="category1" value="Science">
+              <label class="category-subject"> Science</label><br>
+            </div>
+            <div class="category-container">
+              <input type="checkbox" class="category" name="category2" value="Fun">
+              <label class="category-subject"> Fun</label><br>
+            </div>
+            <div class="category-container">
+              <input type="checkbox" class="category" name="category3" value="Engineering">
+              <label class="category-subject">Engineering</label><br>
+            </div>
+            <div class="category-container">
+              <input type="checkbox" class="category" name="category4" value="Career-Oreinted">
+              <label class="category-subject">Career-Oriented</label><br>
+            </div>
+          </div>
+        </div>
+    <p class="copyright">Copyrighted 2021</p>
   </tbody>
+
 </table>
 
 <br>
