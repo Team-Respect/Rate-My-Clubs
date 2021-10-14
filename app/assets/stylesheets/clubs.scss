@@ -38,6 +38,21 @@ html {
   margin-right: 20%;
 }
 
+.home-no-clubs {
+  padding: 5%;
+  margin-bottom: 10%;
+  text-align: center;
+  background-color: black;
+}
+
+.home-no-clubs-text {
+  padding: 5%;
+  background-color: gray;
+  // By default, it should be black.
+  color: black;
+  font-size: 1.5rem;
+}
+
 .home-row {
   display: grid;
   align-items: center;
@@ -64,8 +79,6 @@ html {
   padding-top: 1%;
   padding-bottom: 1%;
   margin-bottom: 5%;
-  // margin-left: 25%;
-  // margin-right: 25%;
   background-color: black;
 }
 

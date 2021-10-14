@@ -3,42 +3,46 @@
 <h1 class="home-page-h1">Rate My Clubs</h1>
 
 <div class="home-main-container">
-  <div class="home-content-container">
-    <% @clubs.each do |club| %>
-      <div class="home-club-container clubs-tr home-row" data-link= "<%= club_path(club.id) %>">
-        <div class ="home-ratings-column">
-          <div class="home-overall-rating-container">
-              <div class="home-overall-rating">
-                <%= 
-                  if club.overall_rating == -1 
-                    "N/A"
-                  else
-                    club.overall_rating
-                  end
-                %>
+  <% if @clubs.first.nil? == true %>
+    <div class="home-no-clubs">
+      <div class="home-no-clubs-text">No clubs available. Sign up and/or log in to create a club.</div>
+    </div>
+  <% else %>
+    <div class="home-content-container">
+      <% @clubs.each do |club| %>
+        <div class="home-club-container clubs-tr home-row" data-link= "<%= club_path(club.id) %>">
+          <div class ="home-ratings-column">
+            <div class="home-overall-rating-container">
+                <div class="home-overall-rating">
+                  <% if club.overall_rating == -1 %>
+                    <div>"N/A"</div>
+                  <% else %>
+                    <div><%= club.overall_rating %></div>
+                  <% end %>
+              </div>
+            </div>
+            <div class="home-number-rating">15 ratings</div>
+          </div>
+          <div class="home-club-info-column">
+            <div class="home-club-name"><%= club.name %></div>
+            <div class="home-category-name"><%= Category.find(club.category_id).name %></div>
+          </div>
+          <div class="home-other-ratings-column">
+            <div class= "other-ratings-metric-row">
+              <p class="home-rating">5.0</p>
+              <p class="home-rating-metric">Rating Metric 1</p>
+            </div>
+            <div class="home-other-ratings-metric-row">
+              <p class="home-rating">5.0</p>
+              <p class="home-rating-metric">Rating Metric 2</p>
+            </div>
+            <div class="home-other-ratings-metric-row">
+              <p class="home-rating">5.0</p>
+              <p class="home-rating-metric">Rating Metric 3</p>
             </div>
           </div>
-          <div class="home-number-rating">15 ratings</div>
         </div>
-        <div class="home-club-info-column">
-          <div class="home-club-name"><%= club.name %></div>
-          <div class="home-category-name"><%= Category.find(club.category_id).name %></div>
-        </div>
-        <div class="home-other-ratings-column">
-          <div class= "other-ratings-metric-row">
-            <p class="home-rating">5.0</p>
-            <p class="home-rating-metric">Rating Metric 1</p>
-          </div>
-          <div class="home-other-ratings-metric-row">
-            <p class="home-rating">5.0</p>
-            <p class="home-rating-metric">Rating Metric 2</p>
-          </div>
-          <div class="home-other-ratings-metric-row">
-            <p class="home-rating">5.0</p>
-            <p class="home-rating-metric">Rating Metric 3</p>
-          </div>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
