@@ -1,47 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rate My Clubs</h1>
+<h1 class="home-page">Rate My Clubs</h1>
 
 <table>
 
   <tbody>
     <% @clubs.each do |club| %>
-      <tr class="clubs-tr" data-link= "<%= club_path(club.id) %>">
-        <div class="content-container">
-          <div class="home-background">
-            <div class="club-container">
-              <div class ="column">
-                <p class="overall-rating"><%= 
-                if club.overall_rating == -1 
-                  "N/A"
-                else
-                  club.overall_rating
-                end
-              %></p>
-                <p class= "number-rating">15 ratings</p>
+      <div class="content-container clubs-tr" data-link= "<%= club_path(club.id) %>">
+        <div class="home-background">
+          <div class="club-container">
+            <div class ="column">
+              <p class="overall-rating"><%= 
+              if club.overall_rating == -1 
+                "N/A"
+              else
+                club.overall_rating
+              end
+            %></p>
+              <p class= "number-rating">15 ratings</p>
+            </div>
+            <div class="column">
+              <p class="club-name"><%= club.name %></p>
+              <p class="category-name"><%= Category.find(club.category_id).name %></p>
+            </div>
+            <div class="other-ratings">
+              <div class= "pair-1">
+                <p class="rating">5.0</p>
+                <p class= "rating-metric">Rating Metric 1</p>
               </div>
-              <div class="column">
-                <p class="club-name"><%= club.name %></p>
-                <p class="category-name"><%= Category.find(club.category_id).name %></p>
+              <div class="pair-2">
+                <p class="rating">5.0</p>
+                <p class= "rating-metric">Rating Metric 2</p>
               </div>
-              <div class="other-ratings">
-                <div class= "pair-1">
-                  <p class="rating">5.0</p>
-                  <p class= "rating-metric">Rating Metric 1</p>
-                </div>
-                <div class="pair-2">
-                  <p class="rating">5.0</p>
-                  <p class= "rating-metric">Rating Metric 2</p>
-                </div>
-                <div class="pair-3">
-                  <p class="rating">5.0</p>
-                  <p class= "rating-metric">Rating Metric 3</p>
-                </div>
+              <div class="pair-3">
+                <p class="rating">5.0</p>
+                <p class= "rating-metric">Rating Metric 3</p>
               </div>
             </div>
           </div>
         </div>
-        <p class="space"> </p>
+      </div>
+      <p class="space"> </p>
       
         <!-- Go to club page link. Not needed anymore since users can just click on the table row to navigate there now.
         <td><%= link_to 'Show', club %></td>-->
@@ -51,8 +50,6 @@
         Moving the Destroy link to the club page. Users will not have this feature in production, but it is kept here for testing purposes.
         <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         -->
-
-      </tr>
     <% end %>
     <div class="category-list">
           <div class="category-background">
