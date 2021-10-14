@@ -30,7 +30,7 @@ html {
 // Home page
 
 // Club listing
-.main-container {
+.home-main-container {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 95% 25%;
@@ -38,14 +38,14 @@ html {
   margin-right: 20%;
 }
 
-.row {
+.home-row {
   display: grid;
   align-items: center;
   grid-auto-flow: column;
   grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
-.col {
+.home-col {
   align-items: center;
 }
 
@@ -57,7 +57,7 @@ html {
 
 }
 
-.content-container {
+.home-content-container {
   align-items: center;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -69,13 +69,13 @@ html {
   background-color: black;
 }
 
-.club-container {
+.home-club-container {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   background-color: gray;
 }
 
-.ratings-column {
+.home-ratings-column {
   // Keep for testing purposes
   //background-color: green;
   padding: 10%;
@@ -85,7 +85,7 @@ html {
   align-items: center;
 }
 
-.overall-rating-container {
+.home-overall-rating-container {
   display: flex;
   align-items: center;
   text-align: center;
@@ -96,7 +96,7 @@ html {
   margin: 10%;
 }
 
-.overall-rating {
+.home-overall-rating {
   // Keep for testing purposes
   //background-color: red;
   font-size: 25px;
@@ -106,28 +106,28 @@ html {
   align-items: center;
 }
 
-.number-rating {
+.home-number-rating {
   margin-top: 10%;
   font-size: 1.25rem;
 }
 
-.club-info-column {
+.home-club-info-column {
   // Keep for testing purposes
   //background-color: red;
 }
 
-.club-name {
+.home-club-name {
   font-weight: bold;
   font-size: 1.5rem;
   margin: 5%;
 }
 
-.category-name {
+.home-category-name {
   font-size: 1.25rem;
   margin: 5%;
 }
 
-.other-ratings-column {
+.home-other-ratings-column {
   display: grid;
   justify-content: center;
   margin-top: 12.5px;
@@ -137,7 +137,7 @@ html {
   text-align: center;
 }
 
-.rating {
+.home-rating {
   text-align: center;
   background-color: white;
   width: 25px;
@@ -145,27 +145,27 @@ html {
   margin: 0px 10px 5px 0px;
 }
 
-.rating-metric {
+.home-rating-metric {
   margin: 2px 70px 5px 0px;
 }
 
-.other-ratings-metric-row {
+.home-other-ratings-metric-row {
   display: flex;
 }
 
 // Category tab
-.category-list {
+.home-category-list {
   // Can't make category tab fixed in grid
   margin-left: 20%;
 }
 
-.category-background {
+.home-category-background {
   background-color: black;
   margin: 0;
   padding: 5px;
 }
 
-.category-heading {
+.home-category-heading {
   background-color: gray;
   text-align: center;
   font-size: 1.5rem;
@@ -173,21 +173,21 @@ html {
   margin: 10px;
 }
 
-.category-input {
+.home-category-input {
   cursor: pointer;
 }
 
-.category-label {
+.home-category-label {
   font-size: 1.25rem;
 }
 
-.category-container {
+.home-category-container {
   background-color: gray;
   padding: 5%;
   margin: 5%;
 }
 
 // Footer
-.copyright {
+.home-copyright {
   text-align: center;
 }
