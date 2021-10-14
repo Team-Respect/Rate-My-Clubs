@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # devise :database_authenticatable, :registerable,
   #       :recoverable, :rememberable, :validatable
   
-  #has_many :ratings
+  has_many :ratings
   
   # Add validations here
   # Ex: uniqueness for email/username?

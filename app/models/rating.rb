@@ -1,5 +1,5 @@
 class Rating < ApplicationRecord
-  #belongs_to :user
+  belongs_to :user
   belongs_to :club
 
   # Validate that the general rating, description, and school year are not empty.

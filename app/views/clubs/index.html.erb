@@ -13,12 +13,12 @@
         <div class="home-club-container clubs-tr home-row" data-link= "<%= club_path(club.id) %>">
           <div class ="home-ratings-column">
             <div class="home-overall-rating-container">
-                <div class="home-overall-rating">
-                  <% if club.overall_rating == -1 %>
-                    <div>"N/A"</div>
-                  <% else %>
-                    <div><%= club.overall_rating %></div>
-                  <% end %>
+              <div class="home-overall-rating">
+                <% if club.overall_rating == -1 %>
+                  <div>"N/A"</div>
+                <% else %>
+                  <div><%= club.overall_rating %></div>
+                <% end %>
               </div>
             </div>
             <div class="home-number-rating">15 ratings</div>
