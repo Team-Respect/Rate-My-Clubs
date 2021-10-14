@@ -2,68 +2,70 @@
 
 <h1 class="home-page-h1">Rate My Clubs</h1>
 
-<div class="content-container">
-  <% @clubs.each do |club| %>
-    <div class="club-container clubs-tr row" data-link= "<%= club_path(club.id) %>">
-      <div class ="ratings-column">
-        <div class="overall-rating-container">
-            <div class="overall-rating">
-              <%= 
-                if club.overall_rating == -1 
-                  "N/A"
-                else
-                  club.overall_rating
-                end
-              %>
+<div class="main-container">
+  <div class="content-container">
+    <% @clubs.each do |club| %>
+      <div class="club-container clubs-tr row" data-link= "<%= club_path(club.id) %>">
+        <div class ="ratings-column">
+          <div class="overall-rating-container">
+              <div class="overall-rating">
+                <%= 
+                  if club.overall_rating == -1 
+                    "N/A"
+                  else
+                    club.overall_rating
+                  end
+                %>
+            </div>
+          </div>
+          <div class= "number-rating">15 ratings</div>
+        </div>
+        <div class="club-info-column">
+          <div class="club-name"><%= club.name %></div>
+          <div class="category-name"><%= Category.find(club.category_id).name %></div>
+        </div>
+        <div class="other-ratings-column">
+          <div class= "other-ratings-metric-row">
+            <p class="rating">5.0</p>
+            <p class= "rating-metric">Rating Metric 1</p>
+          </div>
+          <div class="other-ratings-metric-row">
+            <p class="rating">5.0</p>
+            <p class= "rating-metric">Rating Metric 2</p>
+          </div>
+          <div class="other-ratings-metric-row">
+            <p class="rating">5.0</p>
+            <p class= "rating-metric">Rating Metric 3</p>
           </div>
         </div>
-        <div class= "number-rating">15 ratings</div>
       </div>
-      <div class="club-info-column">
-        <div class="club-name"><%= club.name %></div>
-        <div class="category-name"><%= Category.find(club.category_id).name %></div>
-      </div>
-      <div class="other-ratings-column">
-        <div class= "other-ratings-metric-row">
-          <p class="rating">5.0</p>
-          <p class= "rating-metric">Rating Metric 1</p>
-        </div>
-        <div class="other-ratings-metric-row">
-          <p class="rating">5.0</p>
-          <p class= "rating-metric">Rating Metric 2</p>
-        </div>
-        <div class="other-ratings-metric-row">
-          <p class="rating">5.0</p>
-          <p class= "rating-metric">Rating Metric 3</p>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 
-<div class="category-list">
-  <div class="category-background">
-    <h2 class="category-heading">Categories</h2>
-    <div class="category-container">
-      <input type="checkbox" class="category" name="category1" value="Science">
-      <label class="category-subject"> Science</label><br>
-    </div>
-    <div class="category-container">
-      <input type="checkbox" class="category" name="category2" value="Fun">
-      <label class="category-subject"> Fun</label><br>
-    </div>
-    <div class="category-container">
-      <input type="checkbox" class="category" name="category3" value="Engineering">
-      <label class="category-subject">Engineering</label><br>
-    </div>
-    <div class="category-container">
-      <input type="checkbox" class="category" name="category4" value="Career-Oreinted">
-      <label class="category-subject">Career-Oriented</label><br>
+  <div class="category-list">
+    <div class="category-background">
+      <h2 class="category-heading">Categories</h2>
+      <div class="category-container">
+        <input type="checkbox" class="category-input" name="category1" value="Science">
+        <label class="category-label"> Science</label><br>
+      </div>
+      <div class="category-container">
+        <input type="checkbox" class="category-input" name="category2" value="Fun">
+        <label class="category-label"> Fun</label><br>
+      </div>
+      <div class="category-container">
+        <input type="checkbox" class="category-input" name="category3" value="Engineering">
+        <label class="category-label">Engineering</label><br>
+      </div>
+      <div class="category-container">
+        <input type="checkbox" class="category-input" name="category4" value="Career-Oreinted">
+        <label class="category-label">Career-Oriented</label><br>
+      </div>
     </div>
   </div>
 </div>
 
-<p class="copyright">Copyrighted 2021</p>
+<div class="copyright">Copyrighted 2021</div>
 
 <br>
 
