@@ -24,6 +24,9 @@ Rails.application.routes.draw do
     resources :ratings
   end
 
+  # My Ratings
+  get "/my_ratings", to: "clubs#my_ratings"
+
   # Categories
   resources :categories
 

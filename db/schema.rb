@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_14_230039) do
+ActiveRecord::Schema.define(version: 2021_10_15_230947) do
 
   create_table "assignments_a4_thanh_quan_tests", force: :cascade do |t|
     t.string "image"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_230039) do
 
   create_table "clubs", force: :cascade do |t|
     t.string "name"
-    t.float "overall_rating", default: -1.0, null: false
+    t.decimal "overall_rating", precision: 2, scale: 1, default: "-1.0", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id", null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_230039) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.float "general_rating"
+    t.decimal "general_rating", precision: 2, scale: 1
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

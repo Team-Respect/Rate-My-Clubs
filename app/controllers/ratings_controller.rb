@@ -73,7 +73,7 @@ class RatingsController < ApplicationController
       if @club.ratings.count == 0
         @club.update(overall_rating: -1)
       else
-        @club.update(overall_rating: @club.ratings.average(:general_rating))
+        @club.update(overall_rating: @club.ratings.average(:general_rating).round(1))
       end
     end
 

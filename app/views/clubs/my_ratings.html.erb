@@ -1,0 +1,27 @@
+<% @clubs.each do |club| %>
+
+  <% if club.ratings.exists?(user_id: current_user.id) %>
+
+    <% puts club.name %>
+
+    <br />
+
+    <p>
+      <strong>Rating:</strong>
+      <%= club.ratings.where(user_id: current_user.id).general_rating %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= club.ratings.description %>
+    </p>
+
+    <% if user_signed_in? and club.ratings.user_id == current_user.id %>
+      <%= link_to 'Destroy Rating', [club.ratings.club, club.ratings],
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+    <% end %>
+
+    <br />
+  <% end %>
+<% end %>
