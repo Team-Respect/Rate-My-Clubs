@@ -31,7 +31,7 @@
 <%= render @club.ratings %>
 
 <% if user_signed_in? %>
-  <% if !@club.ratings.exists?(current_user.id) %>
+  <% if !@club.ratings.exists?(user_id: current_user.id) %>
     <h2>Add a rating:</h2>
     <%= render 'ratings/form' %>
   <% else %>
