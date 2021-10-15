@@ -1,17 +1,6 @@
 class RatingsController < ApplicationController
   before_action :set_rating, only: %i[ show edit update destroy ]
-
   after_action :update_rating_to_clubs_overall_rating, only: [:create, :destroy]
-  #after_action :remove_rating_to_clubs_overall_rating, only: [:destroy]
-
-  # Callback
-  def update_rating_to_clubs_overall_rating
-    if @club.ratings.count == 0
-      @club.update(overall_rating: -1)
-    else
-      @club.update(overall_rating: @club.ratings.average(:general_rating))
-    end
-  end
 
   # GET /ratings or /ratings.json
   def index
@@ -80,6 +69,15 @@ class RatingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_rating
       @rating = Rating.find(params[:id])
+    end
+
+    # Callback for updating club's overall rating
+    def update_rating_to_clubs_overall_rating
+      if @club.ratings.count == 0
+        @club.update(overall_rating: -1)
+      else
+        @club.update(overall_rating: @club.ratings.average(:general_rating))
+      end
     end
 
     # Only allow a list of trusted parameters through.
