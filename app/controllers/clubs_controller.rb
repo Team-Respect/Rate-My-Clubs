@@ -7,6 +7,11 @@ class ClubsController < ApplicationController
     @clubs = Club.all
   end
 
+  def my_ratings
+    @clubs = Club.all
+    @ratings = Rating.all
+  end
+
   # GET /clubs/1 or /clubs/1.json
   def show
   end
