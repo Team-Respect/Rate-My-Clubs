@@ -3,6 +3,7 @@ class ClubsController < ApplicationController
 
   # GET /clubs or /clubs.json
   def index
+    @categories = Category.all
     @clubs = Club.all
   end
 

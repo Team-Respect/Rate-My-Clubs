@@ -1,0 +1,6 @@
+<% @categories.each do |category| %>
+  <div class="home-category-container">
+    <input type="checkbox" class="home-category-input" name="category1" value="Science">
+    <label class="home-category-label"><%= category.name %></label><br>
+  </div>
+<% end %>

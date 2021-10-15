@@ -21,7 +21,13 @@
                 <% end %>
               </div>
             </div>
-            <div class="home-number-rating">15 ratings</div>
+            <div class="home-number-rating">
+              <% if club.ratings.count == 1 %>
+                <%= club.ratings.count %> rating
+              <% else %>
+                <%= club.ratings.count %> ratings
+              <% end %>
+            </div>
           </div>
           <div class="home-club-info-column">
             <div class="home-club-name"><%= club.name %></div>
@@ -49,22 +55,7 @@
   <div class="home-category-list">
     <div class="home-category-background">
       <h2 class="home-category-heading">Categories</h2>
-      <div class="home-category-container">
-        <input type="checkbox" class="home-category-input" name="category1" value="Science">
-        <label class="home-category-label"> Science</label><br>
-      </div>
-      <div class="home-category-container">
-        <input type="checkbox" class="home-category-input" name="category2" value="Fun">
-        <label class="home-category-label"> Fun</label><br>
-      </div>
-      <div class="home-category-container">
-        <input type="checkbox" class="home-category-input" name="category3" value="Engineering">
-        <label class="home-category-label">Engineering</label><br>
-      </div>
-      <div class="home-category-container">
-        <input type="checkbox" class="home-category-input" name="category4" value="Career-Oreinted">
-        <label class="home-category-label">Career-Oriented</label><br>
-      </div>
+      <%= render :partial => "categories/list", locals: {categories: @categories}%>
     </div>
   </div>
 </div>
