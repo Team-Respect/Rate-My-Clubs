@@ -31,8 +31,12 @@
 <%= render @club.ratings %>
 
 <% if user_signed_in? %>
-  <h2>Add a rating:</h2>
-  <%= render 'ratings/form' %>
+  <% if !@club.ratings.exists?(user_id: current_user.id) %>
+    <h2>Add a rating:</h2>
+    <%= render 'ratings/form' %>
+  <% else %>
+    <p>Looking to create a rating? You already created one! Users can only have one rating per club page.</p> <br />
+  <% end %>
 <% else %>
   <p>Sign in to create ratings.</p> <br />
 <% end %>

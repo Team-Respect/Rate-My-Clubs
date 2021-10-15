@@ -8,10 +8,10 @@
   <%= rating.description %>
 </p>
 
-<p>
+<% if user_signed_in? and rating.user_id == current_user.id %>
   <%= link_to 'Destroy Rating', [rating.club, rating],
               method: :delete,
               data: { confirm: "Are you sure?" } %>
-</p>
+<% end %>
 
 <br />
