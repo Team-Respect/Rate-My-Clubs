@@ -21,7 +21,13 @@
                 <% end %>
               </div>
             </div>
-            <div class="home-number-rating">15 ratings</div>
+            <div class="home-number-rating">
+                <% if club.ratings.count == 1 %>
+                  <%= club.ratings.count %> rating
+                <% else %>
+                  <%= club.ratings.count %> ratings
+                <% end %>
+            </div>
           </div>
           <div class="home-club-info-column">
             <div class="home-club-name"><%= club.name %></div>
