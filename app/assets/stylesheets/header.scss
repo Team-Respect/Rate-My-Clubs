@@ -6,19 +6,41 @@ body {
 }
 
 .topnav {
-  overflow: hidden;
+  height: 50px;
   background-color: #39363B;
 }
 
-.show_username {
+.show_username,.user_icon{
   float: right;
-  display: block;
+  display: block; 
   color: white;
   font-size: 17px;
   margin-top: 15px;
   padding: 0px 5px 0px 5px;
 }
 
+.user_icon {
+  list-style: none;
+  cursor: pointer;
+}
+.fa-user-circle {
+  position: fixed;
+  right: 30px;
+}
+.user_items {
+  list-style: none;
+  display: none;
+
+}
+.user_items_container {
+  overflow: auto;
+  background-color: #39363B;
+  margin-top: 35px;
+  margin-right: -5px;
+  position: fixed;
+  right: 0px;
+  display: block;
+}
 .topnav .topnav_items {
   float: left;
   display: block;

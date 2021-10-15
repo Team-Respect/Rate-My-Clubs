@@ -8,11 +8,16 @@
 
 <div class="topnav">
 
-  <% if user_signed_in? %>
-    <div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'topnav_items' %></div>
-    <div class = "show_username"style = "float: right" href="Show Username"><%= current_user.username %></div>
-    <div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path, class: 'topnav_items' %></div>
-    <div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path, class: 'topnav_items' %></div>
+  <% if user_signed_in? %>    
+    <!-- <div class = "show_username" style = "float: right" href="Show Username"><%= current_user.username %></div> -->
+    <div class = "user_icon" style = "float: right" href="Show Username">
+          <i class="fa fa-user-circle fa-lg"></i>
+            <div class = "user_items_container">
+              <li class = "user_items"><div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path, class: 'topnav_items' %></div></li>
+              <li class = "user_items"><div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path, class: 'topnav_items' %></div></li>
+              <li class = "user_items"><div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'topnav_items' %></div></li>
+            </div>
+    </div>
   <% else %>
     <div style = "float: right" href="Login"><%= link_to 'Login', new_user_session_path, class: 'topnav_items' %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_user_registration_path, class: 'topnav_items' %></div>
@@ -28,6 +33,7 @@
   </div>
   
 </div>
-
 </body>
 </html>
+
+
