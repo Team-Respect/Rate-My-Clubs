@@ -1,27 +1,45 @@
-<% @clubs.each do |club| %>
+<h1 class="my-ratings-h1">My Ratings</h1>
 
-  <% if club.ratings.exists?(user_id: current_user.id) %>
+<% if user_signed_in? %>
 
-    <% puts club.name %>
+  <!-- Boolean to check if user has rating, else display message -->
+  <% hasRating = false %>
 
-    <br />
+  <!-- For each club, display club name and overall rating -->
+  <!-- Then display user's general rating and description -->
+  <% @clubs.each do |club| %>
 
-    <p>
-      <strong>Rating:</strong>
-      <%= club.ratings.where(user_id: current_user.id).general_rating %>
-    </p>
+    <% if club.ratings.exists?(user_id: current_user.id) %>
 
-    <p>
-      <strong>Description:</strong>
-      <%= club.ratings.description %>
-    </p>
+      <!-- Club overall_rating and Club name -->
+      <%= club.overall_rating %>
+      <%= club.name %>
 
-    <% if user_signed_in? and club.ratings.user_id == current_user.id %>
-      <%= link_to 'Destroy Rating', [club.ratings.club, club.ratings],
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+      <br />
+
+      <!-- User rating and User description -->
+      <% rating = club.ratings.find_by(user_id: current_user.id) %>
+      <%= rating.general_rating %>
+      <%= rating.description %>
+      <!-- Link redirects user to club page -->
+      <%= link_to 'Destroy Rating', [club, rating], method: :delete, data: { confirm: "Are you sure?" } %>
+
+      <br />
+
+      <br />
+
+      <% if hasRating == false %>
+        <% hasRating = true %>
+      <% end %>
+
     <% end %>
-
-    <br />
   <% end %>
+
+  <!-- If user has no ratings, provide no-ratings-message -->
+  <% if hasRating == false %>
+    <p class="no-ratings-message">You don't have any ratings! Add a rating to a club page by clicking on a club on the home page.</p>
+  <% end %>
+
+<% else %>
+  <p class="my-ratings-not-logged-in-message">You need to be logged in to view your ratings.</p>
 <% end %>
