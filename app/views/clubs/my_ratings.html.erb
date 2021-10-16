@@ -21,6 +21,9 @@
       <% rating = club.ratings.find_by(user_id: current_user.id) %>
       <%= rating.general_rating %>
       <%= rating.description %>
+      <%= rating.career_oriented_rating %>
+      <%= rating.enjoyment_rating %>
+      <%= rating.community_rating %>
       <!-- Link redirects user to club page -->
       <%= link_to 'Destroy Rating', [club, rating], method: :delete, data: { confirm: "Are you sure?" } %>
 

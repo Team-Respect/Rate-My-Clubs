@@ -21,6 +21,21 @@
     <%= form.text_field :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :career_oriented_rating %>
+    <%= form.text_field :career_oriented_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enjoyment_rating %>
+    <%= form.text_field :enjoyment_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_rating %>
+    <%= form.text_field :community_rating %>
+  </div>
+
   <%= form.hidden_field :user_id, value: current_user.id %>
 
   <div class="actions">
