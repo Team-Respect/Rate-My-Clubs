@@ -1,6 +1,6 @@
 class RatingsController < ApplicationController
   before_action :set_rating, only: %i[ show edit update destroy ]
-  after_action :update_rating_to_clubs_overall_rating, only: [:create, :destroy]
+  after_action :update_ratings_to_clubs, only: [:create, :destroy]
 
   # GET /ratings or /ratings.json
   def index
@@ -69,16 +69,23 @@ class RatingsController < ApplicationController
     end
 
     # Callback for updating club's overall rating
-    def update_rating_to_clubs_overall_rating
+    def update_ratings_to_clubs
       if @club.ratings.count == 0
         @club.update(overall_rating: -1)
+        @club.update(career_oriented_rating: -1)
+        @club.update(enjoyment_rating: -1)
+        @club.update(community_rating: -1)
       else
         @club.update(overall_rating: @club.ratings.average(:general_rating).round(1))
+        @club.update(career_oriented_rating: @club.ratings.average(:career_oriented_rating).round(1))
+        @club.update(enjoyment_rating: @club.ratings.average(:enjoyment_rating).round(1))
+        @club.update(community_rating: @club.ratings.average(:community_rating).round(1))
       end
     end
 
     # Only allow a list of trusted parameters through.
     def rating_params
-      params.require(:rating).permit(:general_rating, :description, :club_id, :user_id)
+      params.require(:rating).permit(:general_rating, :description, 
+        :career_oriented_rating, :enjoyment_rating, :community_rating, :club_id, :user_id)
     end
 end

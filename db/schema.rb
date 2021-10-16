@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_15_230947) do
+ActiveRecord::Schema.define(version: 2021_10_16_034913) do
 
   create_table "assignments_a4_thanh_quan_tests", force: :cascade do |t|
     t.string "image"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 2021_10_15_230947) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id", null: false
+    t.decimal "career_oriented_rating", precision: 2, scale: 1, default: "-1.0", null: false
+    t.decimal "enjoyment_rating", precision: 2, scale: 1, default: "-1.0", null: false
+    t.decimal "community_rating", precision: 2, scale: 1, default: "-1.0", null: false
     t.index ["category_id"], name: "index_clubs_on_category_id"
   end
 
@@ -41,6 +44,9 @@ ActiveRecord::Schema.define(version: 2021_10_15_230947) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "club_id", null: false
     t.integer "user_id", null: false
+    t.decimal "career_oriented_rating", precision: 2, scale: 1
+    t.decimal "enjoyment_rating", precision: 2, scale: 1
+    t.decimal "community_rating", precision: 2, scale: 1
     t.index ["club_id"], name: "index_ratings_on_club_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end

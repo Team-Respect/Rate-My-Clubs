@@ -16,6 +16,7 @@
             <div class = "user_items_container">
               <li class = "user_items"><div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path, class: 'topnav_items' %></div></li>
               <li class = "user_items"><div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path, class: 'topnav_items' %></div></li>
+              <li class = "user_items"><div style = "float: right" href="My Ratings"><%= link_to 'My Ratings', my_ratings_path, class: 'topnav_items' %></div></li>
               <li class = "user_items"><div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'topnav_items' %></div></li>
             </div>
     </div>
@@ -34,7 +35,9 @@
   </div>
   
 </div>
-</script>
+
+<div class="navbar-padding"></div>
+
 </body>
 </html>
 

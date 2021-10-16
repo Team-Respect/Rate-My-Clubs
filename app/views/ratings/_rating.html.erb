@@ -1,11 +1,26 @@
 <p>
-  <strong>Rating:</strong>
+  <strong>General Rating:</strong>
   <%= rating.general_rating %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= rating.description %>
+</p>
+
+<p>
+  <strong>Career-Oriented Rating:</strong>
+  <%= rating.career_oriented_rating %>
+</p>
+
+<p>
+  <strong>Enjoyment Rating:</strong>
+  <%= rating.enjoyment_rating %>
+</p>
+
+<p>
+  <strong>Community Rating:</strong>
+  <%= rating.community_rating %>
 </p>
 
 <% if user_signed_in? and rating.user_id == current_user.id %>

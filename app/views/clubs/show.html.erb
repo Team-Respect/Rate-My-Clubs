@@ -6,12 +6,45 @@
 </p>
 
 <p>
-  <strong>Overall rating:</strong>
+  <strong>Overall Rating:</strong>
   <%= 
     if @club.overall_rating == -1 
       "N/A"
     else
       @club.overall_rating
+    end
+  %>
+</p>
+
+<p>
+  <strong>Career-Oriented Rating:</strong>
+  <%= 
+    if @club.career_oriented_rating == -1 
+      "N/A"
+    else
+      @club.career_oriented_rating
+    end
+  %>
+</p>
+
+<p>
+  <strong>Enjoyment Rating:</strong>
+  <%= 
+    if @club.enjoyment_rating == -1 
+      "N/A"
+    else
+      @club.enjoyment_rating
+    end
+  %>
+</p>
+
+<p>
+  <strong>Community Rating:</strong>
+  <%= 
+    if @club.community_rating == -1 
+      "N/A"
+    else
+      @club.community_rating
     end
   %>
 </p>
