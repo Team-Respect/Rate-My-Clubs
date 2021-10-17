@@ -1,58 +1,65 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @club.name %>
-</p>
+<div class="club-overall-info-container">
 
-<p>
-  <strong>Overall Rating:</strong>
-  <%= 
+  <div class="overall-rating-box">
+    <div class="overall-rating">
+    <%= 
     if @club.overall_rating == -1 
       "N/A"
     else
       @club.overall_rating
     end
-  %>
-</p>
+    %>
+    </div> 
+  </div>
 
-<p>
-  <strong>Career-Oriented Rating:</strong>
-  <%= 
-    if @club.career_oriented_rating == -1 
-      "N/A"
-    else
-      @club.career_oriented_rating
-    end
-  %>
-</p>
+  <div class="rating-metric-box1"> 
+    <%= 
+      if @club.career_oriented_rating == -1 
+        "N/A"
+      else
+        @club.career_oriented_rating
+      end
+    %>
+  </div>
 
-<p>
-  <strong>Enjoyment Rating:</strong>
-  <%= 
+  <div class="rating-metric-box2"> 
+    <%= 
     if @club.enjoyment_rating == -1 
       "N/A"
     else
       @club.enjoyment_rating
     end
-  %>
-</p>
+    %>
+  </div>
 
-<p>
-  <strong>Community Rating:</strong>
-  <%= 
+  <div class="rating-metric-box3"> 
+    <%= 
     if @club.community_rating == -1 
       "N/A"
     else
       @club.community_rating
     end
-  %>
-</p>
+    %>
+  </div>
+  
+  <div class= "overall-rating-names">
+    <strong><%= @club.name %></strong>
+    <p> <%= Category.find(@club.category_id).name %> </p>
+    <br><br>Career-Oriented
+    <br><br><br><br>Enjoyment
+    <br><br><br><br>Community
+  </div>
+</div>
 
-<p>
-  <strong>Category:</strong>
-  <%= Category.find(@club.category_id).name %>
-</p>
+
+
+
+
+
+
+
 
 <%= link_to 'Destroy', @club, method: :delete, data: { confirm: 'Are you sure?' } %>
 
@@ -75,3 +82,5 @@
 <% end %>
 
 <%= link_to 'Back', clubs_path %>
+
+

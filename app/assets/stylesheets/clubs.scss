@@ -11,7 +11,7 @@ html {
   cursor: pointer;
 }
 
-/* Box that contains name and catagory in create club page */
+/* Box that contains name and category in create club page */
 .create-club-box { 
   width: 900px;
   height: 260px;
@@ -27,178 +27,215 @@ html {
   text-align: center;
 }
 
-// Home page
 
-// Club listing
-.home-main-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 95% 25%;
-  margin-left: 20%;
-  margin-right: 20%;
+
+/*Contains all overall rating info*/
+.club-overall-info-container {
+  position: absolute;
+  width: 313px;
+  height: 462px;
+  left: 49px;
+  top: 156px;
+
+  background: #292929;
 }
 
-.home-no-clubs {
-  padding: 5%;
-  margin-bottom: 10%;
-  text-align: center;
-  background-color: black;
-}
-
-.home-no-clubs-text {
-  padding: 5%;
-  background-color: gray;
-  // By default, it should be black.
-  color: black;
-  font-size: 1.5rem;
-}
-
-.home-row {
-  display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-}
-
-.home-col {
-  align-items: center;
-}
-
-.home-page-h1 {
-  padding: 20px;
-  margin-top: 0px;
-  text-align: center;
-  font-size: 40px;
-}
-
-.home-content-container {
-  align-items: center;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-bottom: 5%;
-  background-color: black;
-}
-
-.home-club-container {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-  background-color: gray;
-}
-
-.home-ratings-column {
-  // Keep for testing purposes
-  //background-color: green;
-  padding: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
-  align-items: center;
-}
-
-.home-overall-rating-container {
+/*Box for overall rating*/
+.club-overall-info-container .overall-rating-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  top: 10%;
+  background: #ffffff;
   display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: white;
   justify-content: center;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  margin: 10%;
-}
-
-.home-overall-rating {
-  // Keep for testing purposes
-  //background-color: red;
-  font-size: 25px;
-  font-weight: bold;
-  // Increasing the padding shifts number to the left
-  //padding: 0;
   align-items: center;
 }
 
-.home-number-rating {
-  margin-top: 10%;
-  font-size: 1.25rem;
+/*Overall rating*/
+.overall-rating {
+  position: relative;
+  font-size: 36px;
+  color: #000000;
 }
 
-.home-club-info-column {
-  // Keep for testing purposes
-  //background-color: red;
+/*Club name, category name*/
+.club-overall-info-container .overall-rating-names {
+  position: absolute;
+  left: 40%;
+  top: 11%;
+  font-size: 20px;
+  color:#ffffff;
 }
 
-.home-club-name {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin: 5%;
-}
-
-.home-category-name {
-  font-size: 1.25rem;
-  margin: 5%;
-}
-
-.home-other-ratings-column {
-  display: grid;
+/*Rating Metric Box*/
+.club-overall-info-container .rating-metric-box1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
   justify-content: center;
-  // Keep for testing purposes
-  //background-color: blue;
   align-items: center;
-  text-align: center;
 }
 
-.home-rating {
-  text-align: center;
-  background-color: white;
+.club-overall-info-container .rating-metric-box2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.club-overall-info-container .rating-metric-box3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Text for sub ratings*/
+.rating-metric-text{
+  position: relative;
+  font-size: 50px;
+  color: #000000;
+}
+
+/*Contains user ratings*/
+.ratings-container {
+  position: absolute;
+  width: 843px;
+  height: 853px;
+  left: 390px;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #2e2e2e;
+}
+
+/*Contains a rating*/
+.ratings-container .rating-rectangle {
+  display: flex;
+  position: relative;
+  width: 712px;
+  min-height: 155px;
+  flex-basis: auto;
+
+  background: #acacac;
+}
+
+/*User's description of a rating*/
+.rating-rectangle .description-box {
+  position: absolute;
+  width: 430px;
+  height: 93px;
+  right: 5%;
+  top: 20%;
+  text-align: left;
+
+  overflow-y: auto;
+
+  background: #c4c4c4;
+}
+
+.rating-rectangle .tag-box1 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 56%;
+  bottom: 6%;
+
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.rating-rectangle .tag-box2 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 41%;
+  bottom: 6%;
+
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.rating-rectangle .tag-box3 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 26%;
+  bottom: 6%;
+
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.ratings-container .year-selection {
+  position: relative;
+  width: 110px;
+  height: 21px;
+  right: 35.6%;
+  align-self: top;
+
+  background: #c4c4c4;
+}
+
+.rating-rectangle .overall-rating-box {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 15%;
+  left: 4%;
+  background: #ffffff;
+}
+
+.rating-rectangle .rating-metric-box4 {
+  position: absolute;
   width: 25px;
   height: 25px;
-  margin: 0px 10px 5px 0px;
+  align-self: baseline;
+  top: 15%;
+  left: 15%;
+
+  background: #f5f5f5;
 }
 
-.home-rating-metric {
-  margin: 2px 70px 5px 0px;
+
+.rating-rectangle .rating-metric-box5 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  align-self: center;
+
+  left: 15%;
+
+  background: #f5f5f5;
 }
 
-.home-other-ratings-metric-row {
-  display: flex;
-}
+.rating-rectangle .rating-metric-box6 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  align-self: baseline;
+  bottom: 15%;
+  left: 15%;
 
-// Category tab
-.home-category-list {
-  // Can't make category tab fixed in grid
-  margin-left: 20%;
+  background: #f5f5f5;
 }
-
-.home-category-background {
-  background-color: black;
-  margin: 0;
-  padding: 5px;
-}
-
-.home-category-heading {
-  background-color: gray;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
-  margin: 10px;
-}
-
-.home-category-input {
-  cursor: pointer;
-}
-
-.home-category-label {
-  font-size: 1.25rem;
-}
-
-.home-category-container {
-  background-color: gray;
-  padding: 5%;
-  margin: 5%;
-}
-
-// Footer
-.home-copyright {
-  text-align: center;
-}
+/*working area end*/
