@@ -11,10 +11,10 @@ html {
   cursor: pointer;
 }
 
-/* Box that contains name and catagory in create club page */
+/* Box that contains name and catagory in create new club page */
 .create-club-box { 
   width: 900px;
-  height: 260px;
+  height: 290px;
   background-color: black;
   color: white;
   margin: 0 auto;
@@ -25,6 +25,21 @@ html {
 /* Headers in club and category pages */
 .category-club-header {
   text-align: center;
+}
+
+.club-form-category-select {
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.club-form-category-select select {
+  width: 100%;
+  height: 53px;
+  padding: 15px;
+  // margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
 // Home page
