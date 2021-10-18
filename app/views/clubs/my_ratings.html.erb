@@ -12,21 +12,82 @@
     <% if club.ratings.exists?(user_id: current_user.id) %>
 
       <!-- Club overall_rating and Club name -->
-      <%= club.overall_rating %>
-      <%= club.name %>
+      <div class="my-ratings-club-name-container">
+        <div class="my-overall-rating-box">
+          <%= club.overall_rating %>
+        </div>
+        <span class="my-ratings-club-name">  <%= club.name %> </span>
+      </div>
 
       <br />
 
       <!-- User rating and User description -->
       <% rating = club.ratings.find_by(user_id: current_user.id) %>
-      <%= rating.general_rating %>
-      <%= rating.description %>
-      <%= rating.career_oriented_rating %>
-      <%= rating.enjoyment_rating %>
-      <%= rating.community_rating %>
-      <!-- Link redirects user to club page -->
-      <%= link_to 'Destroy Rating', [club, rating], method: :delete, data: { confirm: "Are you sure?" } %>
 
+      <div class="ratings-container">
+
+        <div class="rating-rectangle">
+      
+          <div class="overall-rating-box">
+            <span class= "overall-rating-text"> <%= rating.general_rating %> </span>
+          </div>
+      
+          <div class="rating-metric-box4">
+            <span class= "metric-rating-text"> <%= rating.career_oriented_rating %> </span>
+          </div>
+      
+          <div class="rating-metric-box5">
+            <span class= "metric-rating-text"> <%= rating.enjoyment_rating %> </span>
+          </div>
+      
+          <div class="rating-metric-box6">
+            <span class= "metric-rating-text"> <%= rating.community_rating %> </span>
+          </div>
+      
+          <div class="tag-box1">
+          year1
+          </div>
+      
+          <div class="tag-box2">
+          year2
+          </div>
+      
+          <div class="tag-box3">
+          year3
+          </div>
+      
+          <div class="rating-metric-name1">
+          Career-Oriented
+          </div>
+          
+          <div class="rating-metric-name2">
+          Enjoyment
+          </div>
+      
+          <div class="rating-metric-name3">
+          Community
+          </div>
+          
+          <div class="rating-date">
+          Date
+          </div>
+      
+          <div class="delete-rating-button">
+          <% if user_signed_in? and rating.user_id == current_user.id %>
+          <%= link_to 'Destroy Rating', [rating.club, rating],
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+          <% end %>
+          </div>
+      
+          <div class="description-box">
+            <%= rating.description %>
+          </div>
+        
+        </div>
+      </div>
+    
+    
       <br />
 
       <br />

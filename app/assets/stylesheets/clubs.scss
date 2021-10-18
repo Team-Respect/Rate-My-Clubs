@@ -11,7 +11,7 @@ html {
   cursor: pointer;
 }
 
-/* Box that contains name and catagory in create new club page */
+/* Box that contains name and category in create club page */
 .create-club-box { 
   width: 900px;
   height: 290px;
@@ -215,4 +215,305 @@ html {
 // Footer
 .home-copyright {
   text-align: center;
+} 
+
+
+
+
+
+//Club Page
+
+/*Contains all overall rating info*/
+.club-overall-info-container {
+  position: absolute;
+  width: 313px;
+  height: 462px;
+  left: 49px;
+  top: 156px;
+
+  background: #292929;
+}
+
+/*Box for overall rating*/
+.club-overall-info-container .overall-rating-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  top: 10%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Overall rating*/
+.overall-rating {
+  position: relative;
+  font-size: 36px;
+  color: #000000;
+}
+
+/*Club name, category name*/
+.club-overall-info-container .overall-rating-names {
+  position: absolute;
+  left: 40%;
+  top: 11%;
+  font-size: 20px;
+  color:#ffffff;
+}
+
+/*Rating Metric Box*/
+.club-overall-info-container .rating-metric-box1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.club-overall-info-container .rating-metric-box2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.club-overall-info-container .rating-metric-box3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  left: 10%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Text for sub ratings*/
+.rating-metric-text{
+  position: relative;
+  font-size: 50px;
+  color: #000000;
+}
+
+/*Contains user ratings*/
+.ratings-container {
+  position: relative;
+  width: 843px;
+  height: 220px;
+  left: 390px;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #2e2e2e;
+}
+
+/*Contains a rating*/
+.ratings-container .rating-rectangle {
+  display: flex;
+  position: relative;
+  width: 712px;
+  min-height: 155px;
+  flex-basis: auto;
+
+  background: #acacac;
+}
+
+/* User's description of a rating */
+.rating-rectangle .description-box {
+  position: absolute;
+  width: 430px;
+  height: 93px;
+  right: 5%;
+  top: 20%;
+  text-align: left;
+
+  overflow-y: auto;
+
+  background: #c4c4c4;
+}
+
+.rating-rectangle .tag-box1 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 56%;
+  bottom: 6%;
+  font-size: 10px;
+  background: #c4c4c4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-rectangle .tag-box2 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 41%;
+  bottom: 6%;
+  font-size: 10px;
+  background: #c4c4c4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-rectangle .tag-box3 {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 26%;
+  bottom: 6%;
+  font-size: 10px;
+  background: #c4c4c4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-rectangle .rating-date {
+  position: absolute;
+  width: 68px;
+  height: 13px;
+  right: 5%;
+  top: 6%;
+  font-size: 10px;
+  background: #c4c4c4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-container .year-selection {
+  position: relative;
+  width: 110px;
+  height: 21px;
+  right: 35.6%;
+  align-self: top;
+
+  background: #c4c4c4;
+}
+
+/* User's overall rating */
+.rating-rectangle .overall-rating-box {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 15%;
+  left: 4%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overall-rating-text{
+  position: relative;
+  font-size: 25px;
+  color: #000000;
+}
+
+/* User's rating for metric 1 */
+.rating-rectangle .rating-metric-box4 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  align-self: baseline;
+  top: 15%;
+  left: 14%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* User's rating for metric 2 */
+.rating-rectangle .rating-metric-box5 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  left: 14%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* User's rating for metric 3 */
+.rating-rectangle .rating-metric-box6 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  align-self: baseline;
+  bottom: 15%;
+  left: 14%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-rectangle .rating-metric-name1 {
+  position: absolute;
+  left: 18%;
+  top: 17%;
+  font-size: 13px;
+  color:#000000;
+}
+
+.rating-rectangle .rating-metric-name2 {
+  position: absolute;
+  left: 18%;
+  top: 45%;
+  font-size: 13px;
+  color:#000000;
+}
+
+.rating-rectangle .rating-metric-name3 {
+  position: absolute;
+  left: 18%;
+  bottom: 17%;
+  font-size: 13px;
+  color:#000000;
+}
+
+/* User's rating for each metric's text */
+.metric-rating-text{
+  position: relative;
+  font-size: 13px;
+  color: #000000;
+}
+
+.rating-rectangle .delete-rating-button {
+  position: absolute;
+  width: 75px;
+  height: 13px;
+  right: 5%;
+  bottom: 6%;
+  font-size: 10px;
+  background: #acacac;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
