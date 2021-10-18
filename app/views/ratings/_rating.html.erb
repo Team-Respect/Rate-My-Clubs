@@ -1,32 +1,63 @@
-<p>
-  <strong>General Rating:</strong>
-  <%= rating.general_rating %>
-</p>
+<div class="ratings-container">
 
-<p>
-  <strong>Description:</strong>
-  <%= rating.description %>
-</p>
+  <div class="rating-rectangle">
 
-<p>
-  <strong>Career-Oriented Rating:</strong>
-  <%= rating.career_oriented_rating %>
-</p>
+    <div class="overall-rating-box">
+      <span class= "overall-rating-text"> <%= rating.general_rating %> </span>
+    </div>
 
-<p>
-  <strong>Enjoyment Rating:</strong>
-  <%= rating.enjoyment_rating %>
-</p>
+    <div class="rating-metric-box4">
+      <span class= "metric-rating-text"> <%= rating.career_oriented_rating %> </span>
+    </div>
 
-<p>
-  <strong>Community Rating:</strong>
-  <%= rating.community_rating %>
-</p>
+    <div class="rating-metric-box5">
+      <span class= "metric-rating-text"> <%= rating.enjoyment_rating %> </span>
+    </div>
 
-<% if user_signed_in? and rating.user_id == current_user.id %>
-  <%= link_to 'Destroy Rating', [rating.club, rating],
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
-<% end %>
+    <div class="rating-metric-box6">
+      <span class= "metric-rating-text"> <%= rating.community_rating %> </span>
+    </div>
 
-<br />
+    <div class="tag-box1">
+    year1
+    </div>
+
+    <div class="tag-box2">
+    year2
+    </div>
+
+    <div class="tag-box3">
+    year3
+    </div>
+
+    <div class="rating-metric-name1">
+    Career-Oriented
+    </div>
+    
+    <div class="rating-metric-name2">
+    Enjoyment
+    </div>
+
+    <div class="rating-metric-name3">
+    Community
+    </div>
+    
+    <div class="rating-date">
+    Date
+    </div>
+
+    <div class="delete-rating-button">
+    <% if user_signed_in? and rating.user_id == current_user.id %>
+    <%= link_to 'Destroy Rating', [rating.club, rating],
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+    <% end %>
+    </div>
+
+    <div class="description-box">
+      <%= rating.description %>
+    </div>
+  
+  </div>
+</div>
+

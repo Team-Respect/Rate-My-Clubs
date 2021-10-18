@@ -14,3 +14,36 @@
 .no-ratings-message {
   text-align: center;
 }
+
+.my-ratings-club-name {
+  position: relative;
+  font-size: 25px;
+  color: #ffffff;
+  left:30%;
+}
+
+.my-ratings-club-name-container {
+  position: relative;
+  width: 313px;
+  height: 86px;
+  float:left;
+  left:150px;
+  top: 250px;
+  background: #2e2e2e;
+  display: flex;
+  align-items: center;
+}
+
+
+/*User's overall rating*/
+.my-ratings-club-name-container .my-overall-rating-box {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 15%;
+  left: 4%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
