@@ -27,7 +27,172 @@ html {
   text-align: center;
 }
 
+//Home page
 
+// Club listing
+.home-main-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 95% 25%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.home-no-clubs {
+  padding: 5%;
+  margin-bottom: 10%;
+  text-align: center;
+  background-color: black;
+}
+
+.home-row {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.home-col {
+  align-items: center;
+}
+
+.home-page-h1 {
+  padding: 20px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.home-content-container {
+  align-items: center;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 5%;
+  background-color: black;
+}
+
+.home-club-container {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  background-color: gray;
+}
+
+.home-ratings-column {
+  // Keep for testing purposes
+  //background-color: green;
+  padding: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  align-items: center;
+}
+
+.home-overall-rating-container {
+  display: flex;
+}
+
+.home-overall-rating {
+  // Keep for testing purposes
+  //background-color: red;
+  font-size: 25px;
+  font-weight: bold;
+  // Increasing the padding shifts number to the left
+  //padding: 0;
+  align-items: center;
+}
+
+.home-number-rating {
+  margin-top: 10%;
+  font-size: 1.25rem;
+}
+
+.home-club-info-column {
+  // Keep for testing purposes
+  //background-color: red;
+}
+
+.home-club-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 5%;
+}
+
+.home-category-name {
+  font-size: 1.25rem;
+  margin: 5%;
+}
+
+.home-other-ratings-column {
+  display: grid;
+  justify-content: center;
+  // Keep for testing purposes
+  //background-color: blue;
+  align-items: center;
+  text-align: center;
+}
+
+.home-rating {
+  text-align: center;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px 5px 0px;
+}
+
+.home-rating-metric {
+  margin: 2px 70px 5px 0px;
+}
+
+.home-other-ratings-metric-row {
+  display: flex;
+}
+
+// Category tab
+.home-category-list {
+  // Can't make category tab fixed in grid
+  margin-left: 20%;
+}
+
+.home-category-background {
+  background-color: black;
+  margin: 0;
+  padding: 5px;
+}
+
+.home-category-heading {
+  background-color: gray;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 10px;
+}
+
+.home-category-input {
+  cursor: pointer;
+}
+
+.home-category-label {
+  font-size: 1.25rem;
+}
+
+.home-category-container {
+  background-color: gray;
+  padding: 5%;
+  margin: 5%;
+}
+
+// Footer
+.home-copyright {
+  text-align: center;
+} 
+
+
+
+
+
+//Club Page
 
 /*Contains all overall rating info*/
 .club-overall-info-container {
