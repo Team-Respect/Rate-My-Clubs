@@ -14,12 +14,26 @@ html {
 /* Box that contains name and category in create club page */
 .create-club-box { 
   width: 900px;
-  height: 260px;
+  height: 290px;
   background-color: black;
   color: white;
   margin: 0 auto;
   text-align: right;
   padding: 10px;
+}
+
+.club-form-category-select {
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.club-form-category-select select {
+  width: 100%;
+  padding: 17px;
+  // margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
 /* Headers in club and category pages */
@@ -319,7 +333,7 @@ html {
   background: #acacac;
 }
 
-/*User's description of a rating*/
+/* User's description of a rating */
 .rating-rectangle .description-box {
   position: absolute;
   width: 430px;
@@ -399,7 +413,7 @@ html {
   background: #c4c4c4;
 }
 
-/*User's overall rating*/
+/* User's overall rating */
 .rating-rectangle .overall-rating-box {
   position: absolute;
   width: 56px;
@@ -418,7 +432,7 @@ html {
   color: #000000;
 }
 
-/*User's rating for metric 1*/
+/* User's rating for metric 1 */
 .rating-rectangle .rating-metric-box4 {
   position: absolute;
   width: 25px;
@@ -432,7 +446,7 @@ html {
   align-items: center;
 }
 
-/*User's rating for metric 2*/
+/* User's rating for metric 2 */
 .rating-rectangle .rating-metric-box5 {
   position: absolute;
   width: 25px;
@@ -445,7 +459,7 @@ html {
   align-items: center;
 }
 
-/*User's rating for metric 3*/
+/* User's rating for metric 3 */
 .rating-rectangle .rating-metric-box6 {
   position: absolute;
   width: 25px;
@@ -483,7 +497,7 @@ html {
   color:#000000;
 }
 
-/*User's rating for each metric's text*/
+/* User's rating for each metric's text */
 .metric-rating-text{
   position: relative;
   font-size: 13px;
