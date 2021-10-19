@@ -47,3 +47,110 @@
   justify-content: center;
   align-items: center;
 }
+
+/*Contains new rating form at the top of the page*/
+.new-rating-container {
+  position: relative;
+  width: 843px;
+  height: 380px;
+  left: 390px;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #2e2e2e;
+}
+
+/*New rating form*/
+.new-rating-container .new-rating-rectangle {
+  display: flex;
+  position: relative;
+  flex-direction:column;
+  width: 712px;
+  height:300px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap:10px;
+  background: #acacac;
+}
+
+.new-rating-rectangle .general-rating-field{
+  display:flex;
+  position: relative;
+  height:20%;
+  width: 90%;
+  //background: #680249;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+
+.new-rating-rectangle .rating-field{
+  display:flex;
+  align-items: center;
+  position: relative;
+  height:20%;
+  width: 90%;
+  //background: #e4193b;
+  justify-content: center;
+  align-content: center;
+}
+
+.new-rating-container .rating-description{
+  position: relative;
+  width: 90%;
+  height:25%;
+  //background-color: aqua;
+  justify-content: flex-end;
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+//not working
+.rating-description .rating-description-border{
+  //border: 1px solid black;
+}
+
+
+
+/*Rating Stars */
+.rate {
+    float:left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #000000;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #000000;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #000000;
+}
