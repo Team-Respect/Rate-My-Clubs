@@ -1,29 +1,33 @@
-<%= form_with(model: category) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<% if user_signed_in? %>
+  <%= form_with(model: category) do |form| %>
+    <% if category.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% category.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="category-box">
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
     </div>
   <% end %>
-
-  <div class="category-box">
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <%= form.text_field :description %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-  </div>
+<% else %>
+  <div class="category-form-not-logged-in-message">You must be logged in to create a category!</div>
 <% end %>
