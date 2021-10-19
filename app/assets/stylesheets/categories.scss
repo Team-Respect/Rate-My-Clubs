@@ -1,4 +1,4 @@
-/* Box that contains name and catagory in create category page */
+/* Box that contains name and description in create new category page */
 .category-box { 
   width: 900px;
   height: 290px;
@@ -9,11 +9,6 @@
   padding: 10px;
 }
 
-.club-form-category-select select {
-  width: 100%;
-  padding: 15px;
-  // margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+.category-form-not-logged-in-message {
+  text-align: center;
 }
