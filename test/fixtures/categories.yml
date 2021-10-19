@@ -1,7 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+category_1:
+  id: 1
+  name: Science
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:07:54.013347000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2021-10-16 04:07:54.013347000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:07:54.013347000 Z
+    zone: *1
+    time: 2021-10-16 04:07:54.013347000 Z
+  description: Really science nerd stuff remixes

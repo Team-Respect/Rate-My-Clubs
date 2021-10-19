@@ -1,16 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  username: MyString
-  email: MyString
-  password: MyString
-
-two:
-  username: MyString
-  email: MyString
-  password: MyString
-
-test01:
+user_1:
   id: 1
-  email: test01@gmail.com
-  encrypted_password <%= User.new.send(:password_digest, '123456') %>
+  email: jaredwhite@gmail.com
+  encrypted_password: "$2a$12$4M0VnQopPbKnKu8bDBWS.urdadUy4w7r/3gQ3oYG8gqbQ8TG1c2rm"
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:07:46.096127000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2021-10-16 04:07:46.096127000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:07:46.096127000 Z
+    zone: *1
+    time: 2021-10-16 04:07:46.096127000 Z
+  username: jared
+  confirmation_token: 
+  confirmed_at: 
+  confirmation_sent_at: 
+  unconfirmed_email: 
