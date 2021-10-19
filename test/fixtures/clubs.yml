@@ -1,6 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-club_1:
+one:
   id: 1
   name: Chess Club
   overall_rating: !ruby/object:BigDecimal 18:-0.1e1

@@ -1,6 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-category_1:
+one:
   id: 1
   name: Science
   created_at: !ruby/object:ActiveSupport::TimeWithZone

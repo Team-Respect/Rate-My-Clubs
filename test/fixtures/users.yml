@@ -1,6 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-user_1:
+one:
   id: 1
   email: jaredwhite@gmail.com
   encrypted_password: "$2a$12$4M0VnQopPbKnKu8bDBWS.urdadUy4w7r/3gQ3oYG8gqbQ8TG1c2rm"

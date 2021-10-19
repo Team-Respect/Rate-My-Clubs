@@ -1,3 +1,5 @@
+# Source: https://stackoverflow.com/questions/6591722/how-to-generate-fixtures-based-on-my-development-database
+
 class ActiveRecord::Base
   def dump_fixture
     fixture_file = "#{Rails.root}/test/fixtures/#{self.class.table_name}.yml"
