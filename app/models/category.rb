@@ -7,5 +7,5 @@ class Category < ApplicationRecord
   # Validate that the category description not duplicated, or less than 5 characters.
   validates :description, presence: true, uniqueness: true, length: { minimum: 5 }
   
-  has_many :clubs
+  has_many :clubs, :dependent => :destroy
 end

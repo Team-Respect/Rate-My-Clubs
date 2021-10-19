@@ -1,9 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  overall_rating: 1.5
-
-two:
-  name: MyString
-  overall_rating: 1.5
+  id: 1
+  name: Chess Club
+  overall_rating: !ruby/object:BigDecimal 18:-0.1e1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:15:29.346512000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2021-10-16 04:15:29.346512000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-10-16 04:33:00.638437000 Z
+    zone: *1
+    time: 2021-10-16 04:33:00.638437000 Z
+  category_id: 1
+  career_oriented_rating: !ruby/object:BigDecimal 18:-0.1e1
+  enjoyment_rating: !ruby/object:BigDecimal 18:-0.1e1
+  community_rating: !ruby/object:BigDecimal 18:-0.1e1

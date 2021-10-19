@@ -4,32 +4,46 @@ Rails.application.routes.draw do
   # Home page route
   root "clubs#index"
 
+  get '/home', to: "clubs#index"
+
   # About page route
   get '/about', to: "about#index"
+
+  resources :about
 
   # Sign Up page route
   get '/sign_up', to: "sign_up#index"
 
+  resources :sign_up
+
   # Sign Up page route
   get '/login', to: "login#index"
 
+  resources :login
+
   # Forgot Password page route
   get '/password/forgot', to: "password#index"
+
+  #resources :password
 
   # User authentication
   devise_for :users, controllers: {
     confirmations: 'confirmations'
   }
 
-  resources:home, only: [:index]
+  resources :home, only: [:index]
 
   # Clubs and Ratings
   resources :clubs do
     resources :ratings
   end
 
+  resources :ratings
+
   # My Ratings
   get "/my_ratings", to: "clubs#my_ratings"
+
+  resources :my_ratings
 
   # Categories
   resources :categories
@@ -37,6 +51,8 @@ Rails.application.routes.draw do
   # We are not using the below anymore
   # Assignments route
   get "/assignments", to: "assignments#index"
+
+  resources :assignments
 
   # Add A3 work below
   get "/assignments/a3Lawrence", to: "assignments#a3Lawrence"
