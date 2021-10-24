@@ -1,4 +1,4 @@
-/* Box that contains name and description in create new category page */
+/* Box that contains name and catagory in create category page */
 .category-box { 
   width: 900px;
   height: 290px;
@@ -9,6 +9,155 @@
   padding: 10px;
 }
 
-.category-form-not-logged-in-message {
+.club-form-category-select select {
+  width: 100%;
+  padding: 15px;
+  // margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.category-page-header{
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: 40px;
   text-align: center;
+  font-size: 40px;
+  color: black;
+}
+
+.category-column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+.category-name-display{
+  text-align: center;
+  margin-left: 0%;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 22px;
+  white-space: nowrap;
+  color: black;
+  z-index: 1;
+}
+
+.category-description{
+  text-align: left;
+  margin-left: 0%;
+  margin: -10px 20px 20px 20px;
+  font-size: 16px;
+  color: black;
+  z-index: 1;
+}
+
+
+.notice{
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: -30px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.category-created-header{
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 4.5%  ;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.view-categories{
+  position: sticky;
+  float: right;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 3.5%;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+
+}
+
+.edit-categories{
+  float: left;
+  position: sticky;
+  padding: 15px;
+  margin-left: 540px;
+  margin-right: 0px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  width: 120px;
+  height: 50px;
+  background-color: gray;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  z-index: 2;
+
+}
+
+.new-category{
+  position: relative;
+  margin-top: 50px;
+  margin-left: 64.5%;
+  font-weight: bold;
+  padding: 10px;
+  background-color: gray ;
+  color: black;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  width: 200px;
+}
+
+.content-container {
+  display: inline-block;
+  position: relative;
+  left: 25%;
+  margin: -40px auto;
+  width: 50%;
+  z-index: 0;
+}
+
+.home-background {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display:inline-block;
+  width:100%;
+  height: 150%;    
+  background-color: black;
+  z-index: 0;
+  position: sticky;
+}
+
+.club-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 3.5%;
+  margin-bottom: -1%;
+  width: auto;
+  height: 90%;
+  background-color: gray;
+  z-index: 0;
+}
+
+.spacer{
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 2%;
+  background-color: black;
+  width: auto;
+  height: 10px;
+
 }
