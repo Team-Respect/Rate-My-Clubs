@@ -83,6 +83,7 @@ html {
   margin-top: 0px;
   text-align: center;
   font-size: 40px;
+  color: black;
 }
 
 .home-content-container {
@@ -96,8 +97,7 @@ html {
 }
 
 .home-club-container {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  margin: 2.5%;
   background-color: gray;
 }
 
@@ -120,6 +120,8 @@ html {
   padding-top: 10%;
   padding-bottom: 10%;
   margin: 10%;
+  height: 100px;
+  width: 100px;
 }
 
 .home-overall-rating {
@@ -127,14 +129,18 @@ html {
   //background-color: red;
   font-size: 25px;
   font-weight: bold;
+  color: black;
   // Increasing the padding shifts number to the left
   //padding: 0;
   align-items: center;
 }
 
 .home-number-rating {
+  color: black;
+  margin-left: -30%;
   margin-top: 10%;
   font-size: 1.25rem;
+  white-space: nowrap;
 }
 
 .home-club-info-column {
@@ -143,14 +149,21 @@ html {
 }
 
 .home-club-name {
+  position: sticky;
+  white-space: nowrap;
+  margin: -55px 0px 0px -10%;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 5%;
+  color: black;
 }
 
 .home-category-name {
+  position: sticky;
+  margin: 5px 0px 0px -10%;
+  color: black;
   font-size: 1.25rem;
-  margin: 5%;
+  white-space: nowrap;
+
 }
 
 .home-other-ratings-column {
@@ -165,13 +178,16 @@ html {
 .home-rating {
   text-align: center;
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin: 0px 10px 5px 0px;
-}
+  padding: 5px 0px 0px 0px;}
 
 .home-rating-metric {
-  margin: 2px 70px 5px 0px;
+  margin: 7.5px 70px 5px 0px;
+  position: sticky;
+  color: black;
+  white-space: nowrap;
 }
 
 .home-other-ratings-metric-row {
@@ -186,8 +202,10 @@ html {
 
 .home-category-background {
   background-color: black;
-  margin: 0;
+  margin: 0px;
   padding: 5px;
+  width: 200px;
+  height: auto;
 }
 
 .home-category-heading {
@@ -196,6 +214,7 @@ html {
   font-size: 1.5rem;
   padding: 10px;
   margin: 10px;
+  color: black;
 }
 
 .home-category-input {
@@ -204,6 +223,7 @@ html {
 
 .home-category-label {
   font-size: 1.25rem;
+  color: black;
 }
 
 .home-category-container {
@@ -215,6 +235,9 @@ html {
 // Footer
 .home-copyright {
   text-align: center;
+  position: sticky;
+  margin-top: 35%;
+  color: black;
 } 
 
 
