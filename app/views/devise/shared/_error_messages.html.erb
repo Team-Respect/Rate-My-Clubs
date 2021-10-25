@@ -1,3 +1,4 @@
+<!--Error message for Sign Up page-->
 <% if resource.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -8,7 +9,7 @@
     </h2>
     <ul>
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <h3><%= message %></h3>
       <% end %>
     </ul>
   </div>
