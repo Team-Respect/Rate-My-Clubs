@@ -9,9 +9,13 @@
   margin: 0 auto;
 }
 
-/* Error list */
-#error_explanation li {
+/* Error messages for create new categories, 
+create new club creation, and sign up page */
+#error_explanation h3 {
   font-size: 13px;
   color: red;
   text-align: center;
+  margin: 0;
+
 }
+
