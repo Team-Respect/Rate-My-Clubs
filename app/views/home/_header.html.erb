@@ -28,12 +28,11 @@
   <div style = "color: white" href="About"><%= link_to 'About', about_path, class: 'topnav_items' %></div>
   <div style = "color: white" href="Club Categories"><%= link_to 'Club Categories', categories_path, class: 'topnav_items' %></div>
   <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search for Club" name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <%= form_tag(clubs_path, method: :get) do %>
+      <%= text_field_tag(:search, params[:search], placeholder: "Search for Club") %>
+      <button type="submit" name="commit" value="Search" data-disable-with="Search"><i class="fa fa-search"></i></button>
+    <% end %>
   </div>
-  
 </div>
 
 <div class="navbar-padding"></div>
