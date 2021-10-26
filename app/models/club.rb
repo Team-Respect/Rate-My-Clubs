@@ -10,4 +10,17 @@ class Club < ApplicationRecord
 
   belongs_to :category
   has_many :ratings, dependent: :destroy
+
+  def self.search(search)
+    if search
+      club = Club.find_by(name: search)
+      if club
+        self.where(id: club)
+      else
+        Club.all
+      end
+    else
+      Club.all
+    end
+  end
 end

@@ -4,7 +4,7 @@ class ClubsController < ApplicationController
   # GET /clubs or /clubs.json
   def index
     @categories = Category.all
-    @clubs = Club.all
+    @clubs = Club.search(params[:search])
   end
 
   def my_ratings
@@ -70,6 +70,6 @@ class ClubsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def club_params
-      params.require(:club).permit(:name, :overall_rating, :category_id)
+      params.require(:club).permit(:name, :overall_rating, :category_id, :search)
     end
 end
