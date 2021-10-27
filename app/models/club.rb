@@ -13,12 +13,7 @@ class Club < ApplicationRecord
 
   def self.search(search)
     if search
-      club = Club.find_by(name: search)
-      if club
-        self.where(id: club)
-      else
-        Club.all
-      end
+      club = Club.where('name LIKE ?', '%' + search + '%').all
     else
       Club.all
     end
