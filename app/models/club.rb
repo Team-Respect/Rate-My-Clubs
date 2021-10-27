@@ -13,7 +13,7 @@ class Club < ApplicationRecord
 
   def self.search(search)
     if search
-      club = Club.where('lower(name) LIKE ?', '%' + search + '%'.downcase).all
+      club = Club.where('lower(name) LIKE ?', '%' + search.downcase + '%').all
     else
       Club.all
     end
