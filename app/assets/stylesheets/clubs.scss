@@ -421,11 +421,12 @@ html {
 
 .rating-rectangle .rating-date {
   position: absolute;
-  width: 68px;
-  height: 13px;
+  //width: 68px;
+  //height: 13px;
+  padding: 1px;
   right: 5%;
   top: 6%;
-  font-size: 10px;
+  font-size: 1rem;
   background: #c4c4c4;
   border-radius: 4px;
   display: flex;
