@@ -87,18 +87,22 @@ html {
 }
 
 .home-content-container {
+  position: relative;
   align-items: center;
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-top: 1%;
   padding-bottom: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
   background-color: black;
+  z-index: 0;
+  
 }
 
 .home-club-container {
   margin: 2.5%;
   background-color: gray;
+
 }
 
 .home-ratings-column {
@@ -122,6 +126,7 @@ html {
   margin: 10%;
   height: 100px;
   width: 100px;
+  z-index: 0;
 }
 
 .home-overall-rating {
@@ -133,6 +138,7 @@ html {
   // Increasing the padding shifts number to the left
   //padding: 0;
   align-items: center;
+  z-index: 0;
 }
 
 .home-number-rating {
@@ -149,16 +155,17 @@ html {
 }
 
 .home-club-name {
-  position: sticky;
+  position: relative;
   white-space: nowrap;
   margin: -55px 0px 0px -10%;
   font-weight: bold;
   font-size: 1.5rem;
   color: black;
+  z-index: 0;
 }
 
 .home-category-name {
-  position: sticky;
+  position: relative;
   margin: 5px 0px 0px -10%;
   color: black;
   font-size: 1.25rem;
@@ -185,7 +192,7 @@ html {
 
 .home-rating-metric {
   margin: 7.5px 70px 5px 0px;
-  position: sticky;
+  position: relative;
   color: black;
   white-space: nowrap;
 }
@@ -236,7 +243,7 @@ html {
 .home-copyright {
   text-align: center;
   position: sticky;
-  margin-top: 35%;
+  margin-top: 2%;
   color: black;
 } 
 

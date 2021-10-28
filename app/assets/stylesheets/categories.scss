@@ -48,10 +48,12 @@
 .category-description{
   text-align: left;
   margin-left: 0%;
-  margin: -10px 20px 20px 20px;
+  margin: -10px 20px 30px 20px;
   font-size: 16px;
   color: black;
   z-index: 1;
+  padding: 5px 5px 10px 5px;
+  background-color: gray;
 }
 
 
@@ -73,20 +75,17 @@
 }
 
 .view-categories{
-  position: sticky;
-  float: right;
-  padding: 15px;
-  margin-left: 50px;
-  margin-right: 0px;
-  margin-top: 3.5%;
-  margin-bottom: 30px;
-  width: 200px;
-  height: 50px;
-  background-color: gray;
-  text-align: center;
+  position: relative;
+  margin-top: -3.5%;
+  margin-left: 67.5%;
+  padding: 6.5px;
+  background-color: white ;
+  color: black;
+  font-size: 12px;
   white-space: nowrap;
-  color: white;
-
+  text-align: center;
+  width: 110px;
+  border-radius: 7px;
 }
 
 .edit-categories{
@@ -95,7 +94,7 @@
   padding: 15px;
   margin-left: 540px;
   margin-right: 0px;
-  margin-top: -5px;
+  margin-top: 10px;
   margin-bottom: 30px;
   width: 120px;
   height: 50px;
@@ -109,16 +108,16 @@
 
 .new-category{
   position: relative;
-  margin-top: 50px;
-  margin-left: 64.5%;
-  font-weight: bold;
-  padding: 10px;
-  background-color: gray ;
+  margin-top: -4%;
+  margin-left: 66.5%;
+  padding: 6.5px;
+  background-color: white ;
   color: black;
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
   text-align: center;
-  width: 200px;
+  width: 110px;
+  border-radius: 7px;
 }
 
 .content-container {
@@ -127,7 +126,7 @@
   left: 25%;
   margin: -40px auto;
   width: 50%;
-  z-index: 0;
+  z-index: -1;
 }
 
 .home-background {
@@ -137,19 +136,19 @@
   width:100%;
   height: 150%;    
   background-color: black;
-  z-index: 0;
-  position: sticky;
+  position: relative;
+  padding-top: 10px;
 }
 
 .club-container {
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 3.5%;
-  margin-bottom: -1%;
+  margin-top: 1.55%;
+  margin-bottom: 0%;
   width: auto;
-  height: 90%;
+  height:auto;
   background-color: gray;
-  z-index: 0;
+  position: relative;
 }
 
 .spacer{
@@ -159,5 +158,16 @@
   background-color: black;
   width: auto;
   height: 10px;
+  z-index: -1;
+}
 
+.new-category-copyright {
+  text-align: center;
+  position: sticky;
+  margin-top: 22.5%;
+  color: black;
+} 
+
+a{
+  text-decoration-line: none !important;
 }

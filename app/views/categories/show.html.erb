@@ -7,11 +7,17 @@
       <div class ="category-column">
         <p class="category-name-display"><%= @category.name %></p>
         <p class= "category-description"><%= @category.description%></p>
-        
+        <p class="spacer"> </p>
       </div>
-    <div class = "view-categories"><%= link_to 'View Categories', categories_path %></div>
+    </div>
   </div>
 </div>
+<div class="content-container">
+    <div class="home-background">
+      <p class="spacer"> </p>
+    </div>    
+</div>
+<p class = "view-categories"><%= link_to 'View Categories', categories_path %></p>
 
-<p class="home-copyright">Copyrighted 2021</p>
+<p class="new-category-copyright">Copyrighted 2021</p>
 </div>
