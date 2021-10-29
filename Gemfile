@@ -15,6 +15,8 @@ gem 'faraday', '~> 1.8'
 
 gem 'public_suffix', '~> 4.0', '>= 4.0.6'
 
+gem 'obscenity'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
