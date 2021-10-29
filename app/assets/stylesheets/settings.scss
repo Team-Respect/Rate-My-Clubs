@@ -2,10 +2,10 @@
 // Path to HTML.ERB file: app/views/devise/registrations/edit.html.erb
 .setting-big-box {
   width: 1200px;
-  height: 1050px;
-  background-color: gray;
+  //height: 950px;
+  //background-color: gray;
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 25px;
 }
 
 .setting-edit-header {
@@ -15,20 +15,9 @@
   margin-top: 10px;
 }
 
-.setting-username-email-box {
+.setting-main-box {
   width: 900px;
-  height: 260px;
-  background-color: black;
-  color: white;
-  margin: 0 auto;
-  text-align: right;
-  padding: 10px;
-  margin-bottom: 40px;
-}
-
-.setting-password-box {
-  width: 900px;
-  height: 428px;
+  //height: 260px;
   background-color: black;
   color: white;
   margin: 0 auto;
