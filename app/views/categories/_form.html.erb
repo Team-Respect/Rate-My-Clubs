@@ -6,7 +6,7 @@
 
         <ul>
           <% category.errors.each do |error| %>
-            <h3><%= error.full_message %></h3>
+            <p><%= error.full_message %></p>
           <% end %>
         </ul>
       </div>
@@ -26,6 +26,10 @@
       <div class="actions">
         <%= form.submit %>
       </div>
+    </div>
+
+    <div class="category-copyrighted">
+      </p>Copyrighted 2021</p>
     </div>
   <% end %>
 <% else %>

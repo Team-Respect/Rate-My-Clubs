@@ -11,11 +11,17 @@
 
 /* Error messages for create new categories, 
 create new club creation, and sign up page */
-#error_explanation h3 {
+/*#error_explanation li {
+  font-size: 13px;
+  color: red;
+  text-align: left;
+  margin: 0;
+}*/
+
+#error_explanation p {
   font-size: 13px;
   color: red;
   text-align: center;
   margin: 0;
-
+  padding-right: 35px;
 }
-
