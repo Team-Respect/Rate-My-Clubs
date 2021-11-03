@@ -11,121 +11,124 @@
     </div>
   <% end %>
 
-<div class="new-rating-container">
-  <div class="new-rating-rectangle">
-    <strong>Rate this Club</Strong>
 
-    <div class="general-rating-field">
-      <%= form.label :general_rating %>
+<div class="club-page">
+  <div class="new-rating-container">
+    <div class="new-rating-rectangle">
+      <strong>Rate this Club</Strong>
+
+      <div class="general-rating-field">
+        <%= form.label :general_rating %>
 
 
-        <div class="rate">
+          <div class="rate">
 
-          <input type="radio" id="general rating star5" name="rating[general_rating]" value="5" />
-          <label for="general rating star5"> 5 stars</label>
+            <input type="radio" id="general rating star5" name="rating[general_rating]" value="5" />
+            <label for="general rating star5"> 5 stars</label>
 
-          <input type="radio" id="general rating star4" name="rating[general_rating]" value="4" />
-          <label for="general rating star4"> 4 stars</label>
+            <input type="radio" id="general rating star4" name="rating[general_rating]" value="4" />
+            <label for="general rating star4"> 4 stars</label>
 
-          <input type="radio" id="general rating star3" name="rating[general_rating]" value="3" />
-          <label for="general rating star3"> 3 stars</label>
+            <input type="radio" id="general rating star3" name="rating[general_rating]" value="3" />
+            <label for="general rating star3"> 3 stars</label>
 
-          <input type="radio" id="general rating star2" name="rating[general_rating]" value="2" />
-          <label for="general rating star2"> 2 stars</label>
+            <input type="radio" id="general rating star2" name="rating[general_rating]" value="2" />
+            <label for="general rating star2"> 2 stars</label>
 
-          <input type="radio" id="general rating star1" name="rating[general_rating]" value="1" />
-          <label for="general rating star1"> 1 star</label>
-          
+            <input type="radio" id="general rating star1" name="rating[general_rating]" value="1" />
+            <label for="general rating star1"> 1 star</label>
+            
+          </div>
+
+      </div>
+
+      <div class="rating-description">
+        <%= form.label :description %> <br>
+          <span class="rating-description-border"> <%= form.text_field :description %> </span>
+
+      </div>
+    
+      <div class="rating-field">
+
+
+        <div class="field">
+          <%= form.label :career_oriented_rating %>
+          <p>
+            <div class="rate">
+
+              <input type="radio" id="career star5" name="rating[career_oriented_rating]" value="5" />
+              <label for="career star5"> 5 stars</label>
+
+              <input type="radio" id="career star4" name="rating[career_oriented_rating]" value="4" />
+              <label for="career star4"> 4 stars</label>
+
+              <input type="radio" id="career star3" name="rating[career_oriented_rating]" value="3" />
+              <label for="career star3"> 3 stars</label>
+
+              <input type="radio" id="career star2" name="rating[career_oriented_rating]" value="2" />
+              <label for="career star2"> 2 stars</label>
+
+              <input type="radio" id="career star1" name="rating[career_oriented_rating]" value="1" />
+              <label for="career star1"> 1 star</label>
+              
+            </div>
+          </p>
         </div>
 
-    </div>
+        <div class="field">
+          <%= form.label :enjoyment_rating %>
+          <p>
+            <div class="rate">
 
-    <div class="rating-description">
-      <%= form.label :description %> <br>
-        <span class="rating-description-border"> <%= form.text_field :description %> </span>
+              <input type="radio" id="enjoyment star5" name="rating[enjoyment_rating]" value="5" />
+              <label for="enjoyment star5"> 5 stars</label>
 
-    </div>
+              <input type="radio" id="enjoyment star4" name="rating[enjoyment_rating]" value="4" />
+              <label for="enjoyment star4"> 4 stars</label>
 
-  <div class="rating-field">
+              <input type="radio" id="enjoyment star3" name="rating[enjoyment_rating]" value="3" />
+              <label for="enjoyment star3"> 3 stars</label>
 
+              <input type="radio" id="enjoyment star2" name="rating[enjoyment_rating]" value="2" />
+              <label for="enjoyment star2"> 2 stars</label>
 
-    <div class="field">
-      <%= form.label :career_oriented_rating %>
-      <p>
-        <div class="rate">
-
-          <input type="radio" id="career star5" name="rating[career_oriented_rating]" value="5" />
-          <label for="career star5"> 5 stars</label>
-
-          <input type="radio" id="career star4" name="rating[career_oriented_rating]" value="4" />
-          <label for="career star4"> 4 stars</label>
-
-          <input type="radio" id="career star3" name="rating[career_oriented_rating]" value="3" />
-          <label for="career star3"> 3 stars</label>
-
-          <input type="radio" id="career star2" name="rating[career_oriented_rating]" value="2" />
-          <label for="career star2"> 2 stars</label>
-
-          <input type="radio" id="career star1" name="rating[career_oriented_rating]" value="1" />
-          <label for="career star1"> 1 star</label>
-          
+              <input type="radio" id="enjoyment star1" name="rating[enjoyment_rating]" value="1" />
+              <label for="enjoyment star1"> 1 star</label>
+              
+            </div>
+          </p>
         </div>
-      </p>
-    </div>
 
-    <div class="field">
-      <%= form.label :enjoyment_rating %>
-      <p>
-        <div class="rate">
+        <div class="field">
+          <%= form.label :community_rating %>
+          <p>
+            <div class="rate">
 
-          <input type="radio" id="enjoyment star5" name="rating[enjoyment_rating]" value="5" />
-          <label for="enjoyment star5"> 5 stars</label>
+              <input type="radio" id="community star5" name="rating[community_rating]" value="5" />
+              <label for="community star5"> 5 stars</label>
 
-          <input type="radio" id="enjoyment star4" name="rating[enjoyment_rating]" value="4" />
-          <label for="enjoyment star4"> 4 stars</label>
+              <input type="radio" id="community star4" name="rating[community_rating]" value="4" />
+              <label for="community star4"> 4 stars</label>
 
-          <input type="radio" id="enjoyment star3" name="rating[enjoyment_rating]" value="3" />
-          <label for="enjoyment star3"> 3 stars</label>
+              <input type="radio" id="community star3" name="rating[community_rating]" value="3" />
+              <label for="community star3"> 3 stars</label>
 
-          <input type="radio" id="enjoyment star2" name="rating[enjoyment_rating]" value="2" />
-          <label for="enjoyment star2"> 2 stars</label>
+              <input type="radio" id="community star2" name="rating[community_rating]" value="2" />
+              <label for="community star2"> 2 stars</label>
 
-          <input type="radio" id="enjoyment star1" name="rating[enjoyment_rating]" value="1" />
-          <label for="enjoyment star1"> 1 star</label>
-          
+              <input type="radio" id="community star1" name="rating[community_rating]" value="1" />
+              <label for="community star1"> 1 star</label>
+              
+            </div>
+          </p>
         </div>
-      </p>
-    </div>
+      </div>
 
-    <div class="field">
-      <%= form.label :community_rating %>
-      <p>
-        <div class="rate">
+      <%= form.hidden_field :user_id, value: current_user.id %>
 
-          <input type="radio" id="community star5" name="rating[community_rating]" value="5" />
-          <label for="community star5"> 5 stars</label>
-
-          <input type="radio" id="community star4" name="rating[community_rating]" value="4" />
-          <label for="community star4"> 4 stars</label>
-
-          <input type="radio" id="community star3" name="rating[community_rating]" value="3" />
-          <label for="community star3"> 3 stars</label>
-
-          <input type="radio" id="community star2" name="rating[community_rating]" value="2" />
-          <label for="community star2"> 2 stars</label>
-
-          <input type="radio" id="community star1" name="rating[community_rating]" value="1" />
-          <label for="community star1"> 1 star</label>
-          
-        </div>
-      </p>
-    </div>
-    </div>
-
-    <%= form.hidden_field :user_id, value: current_user.id %>
-
-    <div class="actions">
-      <%= form.submit %>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
     </div>
   </div>
 </div>

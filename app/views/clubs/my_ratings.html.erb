@@ -1,109 +1,112 @@
-<h1 class="my-ratings-h1">My Ratings</h1>
+<div class="my-ratings-page">
+  <h1 class="my-ratings-h1">My Ratings</h1>
 
-<% if user_signed_in? %>
+  <% if user_signed_in? %>
 
-  <!-- Boolean to check if user has rating, else display message -->
-  <% hasRating = false %>
+    <!-- Boolean to check if user has rating, else display message -->
+    <% hasRating = false %>
 
-  <!-- For each club, display club name and overall rating -->
-  <!-- Then display user's general rating and description -->
-  <% @clubs.each do |club| %>
+    <!-- For each club, display club name and overall rating -->
+    <!-- Then display user's general rating and description -->
+    <% @clubs.each do |club| %>
 
-    <% if club.ratings.exists?(user_id: current_user.id) %>
+      <% if club.ratings.exists?(user_id: current_user.id) %>
 
-      <!-- Club overall_rating and Club name -->
-      <div class="my-ratings-club-name-container">
-        <div class="my-overall-rating-box">
-          <%= club.overall_rating %>
+        <!-- Club overall_rating and Club name -->
+        <div class="my-ratings-club-name-container">
+          <div class="my-overall-rating-box">
+            <%= club.overall_rating %>
+          </div>
+          <span class="my-ratings-club-name">  <%= club.name %> </span>
         </div>
-        <span class="my-ratings-club-name">  <%= club.name %> </span>
-      </div>
 
-      <br />
+        <br />
 
-      <!-- User rating and User description -->
-      <% rating = club.ratings.find_by(user_id: current_user.id) %>
+        <!-- User rating and User description -->
+        <% rating = club.ratings.find_by(user_id: current_user.id) %>
 
-      <div class="ratings-container">
+        <div class="ratings-container">
 
-        <div class="rating-rectangle">
-      
-          <div class="overall-rating-box">
-            <span class= "overall-rating-text"> <%= rating.general_rating %> </span>
-          </div>
-      
-          <div class="rating-metric-box4">
-            <span class= "metric-rating-text"> <%= rating.career_oriented_rating %> </span>
-          </div>
-      
-          <div class="rating-metric-box5">
-            <span class= "metric-rating-text"> <%= rating.enjoyment_rating %> </span>
-          </div>
-      
-          <div class="rating-metric-box6">
-            <span class= "metric-rating-text"> <%= rating.community_rating %> </span>
-          </div>
-      
-          <div class="tag-box1">
-          year1
-          </div>
-      
-          <div class="tag-box2">
-          year2
-          </div>
-      
-          <div class="tag-box3">
-          year3
-          </div>
-      
-          <div class="rating-metric-name1">
-          Career-Oriented
-          </div>
-          
-          <div class="rating-metric-name2">
-          Enjoyment
-          </div>
-      
-          <div class="rating-metric-name3">
-          Community
-          </div>
-          
-          <div class="rating-date">
-            <%= rating.created_at.strftime("%B %d, %Y") %>
-          </div>
-      
-          <div class="delete-rating-button">
-          <% if user_signed_in? and rating.user_id == current_user.id %>
-          <%= link_to 'Destroy Rating', [rating.club, rating],
-                      method: :delete,
-                      data: { confirm: "Are you sure?" } %>
-          <% end %>
-          </div>
-      
-          <div class="description-box">
-            <%= rating.description %>
-          </div>
+          <div class="rating-rectangle">
         
+            <div class="overall-rating-box">
+              <span class= "overall-rating-text"> <%= rating.general_rating %> </span>
+            </div>
+        
+            <div class="rating-metric-box4">
+              <span class= "metric-rating-text"> <%= rating.career_oriented_rating %> </span>
+            </div>
+        
+            <div class="rating-metric-box5">
+              <span class= "metric-rating-text"> <%= rating.enjoyment_rating %> </span>
+            </div>
+        
+            <div class="rating-metric-box6">
+              <span class= "metric-rating-text"> <%= rating.community_rating %> </span>
+            </div>
+        
+            <div class="tag-box1">
+            year1
+            </div>
+        
+            <div class="tag-box2">
+            year2
+            </div>
+        
+            <div class="tag-box3">
+            year3
+            </div>
+        
+            <div class="rating-metric-name1">
+            Career-Oriented
+            </div>
+            
+            <div class="rating-metric-name2">
+            Enjoyment
+            </div>
+        
+            <div class="rating-metric-name3">
+            Community
+            </div>
+            
+            <div class="rating-date">
+              <%= rating.created_at.strftime("%B %d, %Y") %>
+            </div>
+        
+            <div class="delete-rating-button">
+            <% if user_signed_in? and rating.user_id == current_user.id %>
+            <%= link_to 'Destroy Rating', [rating.club, rating],
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+            <% end %>
+            </div>
+        
+            <div class="description-box">
+              <%= rating.description %>
+            </div>
+          
+          </div>
         </div>
-      </div>
-    
-    
-      <br />
+      
+      
+        <br />
 
-      <br />
+        <br />
 
-      <% if hasRating == false %>
-        <% hasRating = true %>
+        <% if hasRating == false %>
+          <% hasRating = true %>
+        <% end %>
+
       <% end %>
-
     <% end %>
+
+    <!-- If user has no ratings, provide no-ratings-message -->
+    <% if hasRating == false %>
+      <p class="no-ratings-message">You don't have any ratings! Add a rating to a club page by clicking on a club on the home page.</p>
+    <% end %>
+
+  <% else %>
+    <p class="my-ratings-not-logged-in-message">You need to be logged in to view your ratings.</p>
   <% end %>
 
-  <!-- If user has no ratings, provide no-ratings-message -->
-  <% if hasRating == false %>
-    <p class="no-ratings-message">You don't have any ratings! Add a rating to a club page by clicking on a club on the home page.</p>
-  <% end %>
-
-<% else %>
-  <p class="my-ratings-not-logged-in-message">You need to be logged in to view your ratings.</p>
-<% end %>
+</div>
