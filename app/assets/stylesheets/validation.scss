@@ -9,37 +9,35 @@
   margin: 0 auto;
 }
 
-/*Error message for sign up page*/
+/*Error message for sign up and setting page*/
 #error_explanation h3 {
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 35px;
   font-size: 13px;
-  margin: 0;
+  color: white;
   text-align: center;
-  background-color: red;
+  margin: 10px auto;
+  padding-right: 50px;
 }
 
 /*Error message for create new club and create new category page*/
 #error_explanation p {
-  width: 350px;
+  width: 450px;
   height: 15px;
-  background-color: red;
   font-size: 13px;
   color: white;
   text-align: center;
-  margin: 0;
-  margin-left: 550px;
-  /*padding-right: 35px;*/
+  margin: 10px auto;
+  padding-right: 50px;
 }
 
 /*Error message for create rating page*/
 #notice1 {
+  display: block;
+  width: 800px;
+  font-size: 13px;
   color: white;
   text-align: center;
-  font-size: 13px;
-  display: block;
-  width: 500px;
-  margin: 20px;
-  margin-left: 660px;
-  background-color: red;
+  margin: 10px auto;
+  padding-left: 300px;
 }
