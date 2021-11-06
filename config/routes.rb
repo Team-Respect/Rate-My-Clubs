@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   # Home page route
   root "clubs#index"
 
-  get '/home', to: "clubs#index"
-
   # About page route
   get '/about', to: "about#index"
 
@@ -30,8 +28,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     confirmations: 'confirmations'
   }
-
-  resources :home, only: [:index]
 
   # Clubs and Ratings
   resources :clubs do
