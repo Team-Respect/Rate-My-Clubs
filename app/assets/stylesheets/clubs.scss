@@ -222,7 +222,7 @@ html {
 }
 
 .home-category-heading {
-  background-color: rgb(128, 128, 128);
+  background-color: gray;
   text-align: center;
   font-size: 1.5rem;
   padding: 10px;
@@ -258,11 +258,17 @@ html {
 
 
 //Club Page
+.club-page{
+  width:100%;
+  min-width:1400px;
+  height:100%;
+}
 
 /*Contains all overall rating info*/
 .club-overall-info-container {
   position: absolute;
-  width: 313px;
+  min-width: 350px;
+  width:20%;
   height: 462px;
   left: 49px;
   top: 156px;
@@ -346,10 +352,12 @@ html {
 /*Contains user ratings*/
 .ratings-container {
   position: relative;
-  width: 843px;
+  min-width: 843px;
+  width:60%;
   height: 220px;
-  left: 390px;
-  top: 150px;
+  margin-left:30%;
+  margin-right: 20%;
+  top: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -362,7 +370,8 @@ html {
 .ratings-container .rating-rectangle {
   display: flex;
   position: relative;
-  width: 712px;
+  min-width: 712px;
+  width:90%;
   min-height: 155px;
   flex-basis: auto;
 
@@ -372,7 +381,7 @@ html {
 /* User's description of a rating */
 .rating-rectangle .description-box {
   position: absolute;
-  width: 430px;
+  width: 60%;
   height: 93px;
   right: 5%;
   top: 20%;
