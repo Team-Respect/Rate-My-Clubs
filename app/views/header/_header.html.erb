@@ -25,19 +25,19 @@
     <div style = "float: right" href="Login"><%= link_to 'Login', new_user_session_path, class: 'topnav_items' %></div>
     <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_user_registration_path, class: 'topnav_items' %></div>
   <% end %>
-  <div style = "color: white" href="Logo"><%= link_to 'Logo', root_path, class: 'topnav_items' %></div>
-  <div style = "color: white" href="About"><%= link_to 'About', about_path, class: 'topnav_items' %></div>
-  <div style = "color: white" href="Club Categories"><%= link_to 'Club Categories', categories_path, class: 'topnav_items' %></div>
+  <div class="logo-container"><%= link_to image_tag("favicon.ico"), root_path %></div>
+  <div style = "color: white" href="About"><%= link_to 'About', about_path, class: 'topnav_about'%></div>
+  <div style = "color: white" href="Club Categories"><%= link_to 'Club Categories', categories_path, class: 'topnav_club_categories' %></div>
   <div class="search-container">
     <%= form_tag(clubs_path, method: :get) do %>
       <%= text_field_tag(:search, params[:search], placeholder: "Search for Club") %>
-      <button type="submit" name="commit" value="Search" data-disable-with="Search"><i class="fa fa-search"></i></button>
+      <button type="submit" name="commit" value="box" data-disable-with="Search"><i class="fa fa-search"></i></button>
     <% end %>
   </div>
 </div>
 
 <div class="navbar-padding"></div>
-
+ 
 </body>
 </html>
 

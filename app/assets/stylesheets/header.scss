@@ -51,12 +51,36 @@ body {
 }
 .topnav .topnav_items {
   float: left;
-  display: block;
+  display: flex;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav .topnav_about{
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 80px;
+  margin-top: -70px;
+  position: relative;
+}
+
+.topnav .topnav_club_categories{
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 150px;
+  margin-top: -70px;
+  position: relative;
 }
 
 .topnav .topnav_items:hover {
@@ -80,6 +104,14 @@ body {
   width: 20%
 }
 
+.logo-container {
+  margin-top: -7px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  z-index: 1;
+  
+}
+
 .topnav .search-container button {
   padding: 6px 10px;
   top: 0%;
@@ -92,7 +124,7 @@ body {
   border: none;
   cursor: pointer;
 }
-
+     
 .topnav .search-container button:hover {
   background: #ccc;
 }
@@ -104,3 +136,4 @@ body {
 .navbar-padding {
   padding: 25px;
 }
+
