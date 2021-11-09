@@ -1,44 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-<%= javascript_pack_tag 'home' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+  <%= javascript_pack_tag 'home' %>
 </head>
-<body>
-
-<div class="topnav">
-
-  <% if user_signed_in? %>    
-    <div class = "show_username" style = "float: right" href="Show Username"><%= current_user.username %></div>
-    <div class = "user_icon" style = "float: right" href="Show Username">
-          <i class="fa fa-user-circle fa-lg"></i>
-            <div class = "user_items_container">
-              <li class = "user_items"><div style = "float: right" href="Create Club"><%= link_to 'Create Club', new_club_path, class: 'topnav_items' %></div></li>
-              <li class = "user_items"><div style = "float: right" href="Create Category"><%= link_to 'Create Category', new_category_path, class: 'topnav_items' %></div></li>
-              <li class = "user_items"><div style = "float: right" href="My Ratings"><%= link_to 'My Ratings', my_ratings_path, class: 'topnav_items' %></div></li>
-              <li class = "user_items"><div style = "float: right" href="Settings"><%= link_to "Settings", edit_user_registration_path, class: 'topnav_items' %></div></li>
-              <li class = "user_items"><div style = "float: right" href="Logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'topnav_items' %></div></li>
-            </div>
-    </div>
-  <% else %>
-    <div style = "float: right" href="Login"><%= link_to 'Login', new_user_session_path, class: 'topnav_items' %></div>
-    <div style = "float: right" href="SignUp"><%= link_to 'Sign Up', new_user_registration_path, class: 'topnav_items' %></div>
+  <body>
+  <% if user_signed_in? %>  
+    <nav>
+      <div class="menu-icon">
+          <span class="fa fa-bars"></span>
+      </div>
+      <div class="logo">
+        <%= link_to image_tag("favicon.ico"), root_path %>
+      </div>
+      <div class="nav-items">
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Club Categories', categories_path %></li>
+          <li class="mobile-menu"><%= link_to 'Create Club', new_club_path %></li>
+          <li class="mobile-menu"><%= link_to 'Create Category', new_category_path %></li>
+          <li class="mobile-menu"><%= link_to 'My Ratings', my_ratings_path %></li>
+          <li class="mobile-menu"><%= link_to "Settings", edit_user_registration_path %></li>
+          <li class="mobile-menu"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          
+      </div>
+      <div class="search-icon">
+          <span class="fa fa-search"></span>
+      </div>
+      <div class="cancel-icon">
+          <span class="fa fa-times"></span>
+      </div>
+      <%= form_tag(clubs_path, method: :get) do %>
+        <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
+        <button type="submit" class="fa fa-search" style="color: black"></button>
+      <% end %> 
+        <div class="dropdown dropdown-menu">
+          <button class="dropbtn" onclick="myFunction()">
+            <i class="fa fa-user"></i>&nbsp;
+              <%= current_user.username %>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <%= link_to 'Create Club', new_club_path %>
+            <%= link_to 'Create Category', new_category_path %>
+            <%= link_to 'My Ratings', my_ratings_path %>
+            <%= link_to "Settings", edit_user_registration_path %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+          </div>
+        </div>
+    </nav>
+    <% else %>
+    <nav>
+      <div class="menu-icon">
+          <span class="fa fa-bars"></span>
+      </div>
+      <div class="logo">
+        <%= link_to image_tag("favicon.ico"), root_path %>
+      </div>
+      <div class="nav-items">
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Club Categories', categories_path %></li>      
+          <li class="mobile-menu"><%= link_to 'Login', new_user_session_path %></li>
+          <li class="mobile-menu"><%= link_to 'Sign Up', new_user_registration_path %></li>  
+      </div>
+      <div class="search-icon">
+          <span class="fa fa-search"></span>
+      </div>
+      <div class="cancel-icon">
+          <span class="fa fa-times"></span>
+      </div>
+      <%= form_tag(clubs_path, method: :get) do %>
+          <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
+          <button type="submit" class="fa fa-search" style="color: black"></button>
+      <% end %>
+      <div class="nav-items">
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>        
+      </div>  
+    </nav>
   <% end %>
-  <div class="logo-container"><%= link_to image_tag("favicon.ico"), root_path %></div>
-  <div style = "color: white" href="About"><%= link_to 'About', about_path, class: 'topnav_about'%></div>
-  <div style = "color: white" href="Club Categories"><%= link_to 'Club Categories', categories_path, class: 'topnav_club_categories' %></div>
-  <div class="search-container">
-    <%= form_tag(clubs_path, method: :get) do %>
-      <%= text_field_tag(:search, params[:search], placeholder: "Search for Club") %>
-      <button type="submit" name="commit" value="box" data-disable-with="Search"><i class="fa fa-search"></i></button>
-    <% end %>
-  </div>
-</div>
-
-<div class="navbar-padding"></div>
- 
-</body>
+  </body>
 </html>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
 
-
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+</script>
