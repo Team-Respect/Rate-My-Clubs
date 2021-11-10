@@ -10,14 +10,14 @@
 
 ## Overview
 ### Description
-Like Rate My Professors, but with clubs! This web service allows users to create and view clubs, add and view ratings, and search and filter clubs based on category or name. This application is for a semester-long group project in CS 4800 - Software Engineering.
+Like Rate My Professors, but with clubs! This web service allows users to create and view clubs, add and view ratings, and search and filter clubs based on category or name. This application is for a semester-long group project in CS 4800 - Software Engineering at California State Polytechnic University, Pomona.
 
 ### App Evaluation
 - **Category:** Review App / Academia
 - **Mobile:** This app would be primarily developed for desktop but is just as viable on a mobile device.
 - **Story:** Displays clubs for users to click on to view the club page. From there, logged in users can add ratings to that particular club.
 - **Market:** The target audience is college students who want to view and rate clubs.
-- **Habit:** This app could be used as often or unoften as the user wanted. Users who are not logged in can view clubs, but cannot create ratings.
+- **Habit:** This app could be used as often or unoften as the user wants. Users who are not logged in can view clubs, but cannot create ratings.
 
 ## Deployment
 The web service is deployed on Heroku:
@@ -41,7 +41,7 @@ bin/rails db:migrate
 ```
 2. To run the server, do the following command:
 ```
-rails s
+bin/rails server
 ```
 3. Open your local host URL in a web browser: 
 [http://localhost:3000/](http://localhost:3000/)
@@ -49,15 +49,16 @@ rails s
 ## Product Spec
 ### 1. User Stories
 
-#### Login NOT Required
+#### Stories that Do NOT Require Login
 
-* User filters clubs based on their category.
+* User filters clubs based on their categories
 * Can search for clubs by name
 * View club pages by clicking on club cards on the Home Page
+* User can create an account, verify the account through an Email and login
 
-#### Login Required
+#### Stories that Do Require Login
 
-* User can create an account, verify the account through an Email, and log in and sign out.
+* User can log out
 * Can create club categories
 * Can create clubs
 * Can create ratings
@@ -77,11 +78,11 @@ rails s
    * Displays all user-created ratings for the club with creation date, overall, career-oriented, enjoyment, and community ratings, and description. For specific user's rating, there will be a "Destroy Rating" button.
    * Prompts user with a form to create a rating of their own if the user is signed in and does not already have a rating themselves.
 * Login Page
-* Sign Page - User signs up or logs into their account
+* Sign Page - User signs up by inputting a username, Email, and password.
    * An Email to verify the user's account creation will be sent.
 * About Page
    * Displays information on the team of developers
-   * Allows users to navigate off the site to the GitHub link and our developer site.
+   * Allows users to navigate off the site to the GitHub link and our class's Team webpage.
 * Club Categories Page
    * Displays all user-created club categories with descriptions
    * Allows signed in users to navigate to a new page to create a new category.
@@ -107,9 +108,9 @@ rails s
 * Logo - Home Page
 * About
 * Club Categories
-* Search Bar
+* Search Bar - Goes/Stays on Home Page
 
-#### Sign Out
+#### Signed Out
 
 * Sign In
 * Login
@@ -145,9 +146,8 @@ rails s
 
 ## Schema 
 ### Models
-#### Post
 
-1. Categories
+#### Categories
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -157,7 +157,7 @@ rails s
    | created_at     | DateTime | date when post is created (default field) |
    | updated_at     | DateTime | date when post is last updated (default field) |
 
-2. Clubs
+#### Clubs
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -171,7 +171,7 @@ rails s
    | updated_at     | DateTime | date when post is last updated (default field) |
    | category_id   | String   | unique category id associated as a foreign key to the club model instance |
 
-3. Ratings
+#### Ratings
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -186,7 +186,7 @@ rails s
    | club_id       | String   | unique club id associated as a foreign key to the rating model instance |
    | user_id       | String   | unique user id associated as a foreign key to the rating model instance |
 
-4. Users
+#### Users
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -203,5 +203,3 @@ rails s
    | unconfirmed_email| String| an email address copied from the email attr. |
    | created_at     | DateTime | date when post is created (default field) |
    | updated_at     | DateTime | date when post is last updated (default field) |
-   | club_id       | String   | unique club id associated as a foreign key to the rating model instance |
-   | user_id       | String   | unique user id associated as a foreign key to the rating model instance |
