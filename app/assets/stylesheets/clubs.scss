@@ -563,3 +563,8 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+// Fixes bug that autoscrolls the star ratings when selected
+input[type="radio"] {
+  visibility:hidden;
+}
