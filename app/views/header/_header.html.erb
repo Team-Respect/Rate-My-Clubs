@@ -6,93 +6,58 @@
   <%= javascript_pack_tag 'home' %>
 </head>
   <body>
+<nav>
+  <div class="menu-icon"><span class="fa fa-bars"></span></div>
+  <div class="logo"><%= link_to image_tag("favicon.ico"), root_path %></div>
   <% if user_signed_in? %>  
-    <nav>
-      <div class="menu-icon">
-          <span class="fa fa-bars"></span>
+    <div class="nav-items">
+      <li><%= link_to 'About', about_path %></li>
+      <li><%= link_to 'Club Categories', categories_path %></li>
+      <li class="mobile-menu"><%= link_to 'Create Club', new_club_path %></li>
+      <li class="mobile-menu"><%= link_to 'Create Category', new_category_path %></li>
+      <li class="mobile-menu"><%= link_to 'My Ratings', my_ratings_path %></li>
+      <li class="mobile-menu"><%= link_to "Settings", edit_user_registration_path %></li>
+      <li class="mobile-menu"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+    </div>
+    <div class="search-icon"><span class="fa fa-search"></span></div>
+    <div class="cancel-icon"><span class="fa fa-times"></span></div>
+    <%= form_tag(clubs_path, method: :get) do %>
+      <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
+      <button type="submit" class="fa fa-search" style="color: black"></button>
+    <% end %> 
+    <div class="dropdown dropdown-menu">
+      <button class="dropbtn" onclick="myFunction()">
+        <i class="fa fa-user"></i>&nbsp;
+        <%= current_user.username %>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <%= link_to 'Create Club', new_club_path %>
+        <%= link_to 'Create Category', new_category_path %>
+        <%= link_to 'My Ratings', my_ratings_path %>
+        <%= link_to "Settings", edit_user_registration_path %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       </div>
-      <div class="logo">
-        <%= link_to image_tag("favicon.ico"), root_path %>
-      </div>
-      <div class="nav-items">
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Club Categories', categories_path %></li>
-          <li class="mobile-menu"><%= link_to 'Create Club', new_club_path %></li>
-          <li class="mobile-menu"><%= link_to 'Create Category', new_category_path %></li>
-          <li class="mobile-menu"><%= link_to 'My Ratings', my_ratings_path %></li>
-          <li class="mobile-menu"><%= link_to "Settings", edit_user_registration_path %></li>
-          <li class="mobile-menu"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-          
-      </div>
-      <div class="search-icon">
-          <span class="fa fa-search"></span>
-      </div>
-      <div class="cancel-icon">
-          <span class="fa fa-times"></span>
-      </div>
-      <%= form_tag(clubs_path, method: :get) do %>
-        <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
-        <button type="submit" class="fa fa-search" style="color: black"></button>
-      <% end %> 
-        <div class="dropdown dropdown-menu">
-          <button class="dropbtn" onclick="myFunction()">
-            <i class="fa fa-user"></i>&nbsp;
-              <%= current_user.username %>
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content" id="myDropdown">
-            <%= link_to 'Create Club', new_club_path %>
-            <%= link_to 'Create Category', new_category_path %>
-            <%= link_to 'My Ratings', my_ratings_path %>
-            <%= link_to "Settings", edit_user_registration_path %>
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-          </div>
-        </div>
-    </nav>
-    <% else %>
-    <nav>
-      <div class="menu-icon">
-          <span class="fa fa-bars"></span>
-      </div>
-      <div class="logo">
-        <%= link_to image_tag("favicon.ico"), root_path %>
-      </div>
-      <div class="nav-items">
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Club Categories', categories_path %></li>      
-          <li class="mobile-menu"><%= link_to 'Login', new_user_session_path %></li>
-          <li class="mobile-menu"><%= link_to 'Sign Up', new_user_registration_path %></li>  
-      </div>
-      <div class="search-icon">
-          <span class="fa fa-search"></span>
-      </div>
-      <div class="cancel-icon">
-          <span class="fa fa-times"></span>
-      </div>
-      <%= form_tag(clubs_path, method: :get) do %>
-          <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
-          <button type="submit" class="fa fa-search" style="color: black"></button>
-      <% end %>
-      <div class="nav-items">
-        <li><%= link_to 'Login', new_user_session_path %></li>
-        <li><%= link_to 'Sign Up', new_user_registration_path %></li>        
-      </div>  
-    </nav>
+    </div>
+  <% else %>
+    <div class="nav-items">
+      <li><%= link_to 'About', about_path %></li>
+      <li><%= link_to 'Club Categories', categories_path %></li>      
+      <li class="mobile-menu"><%= link_to 'Login', new_user_session_path %></li>
+      <li class="mobile-menu"><%= link_to 'Sign Up', new_user_registration_path %></li>  
+    </div>
+    <div class="search-icon"><span class="fa fa-search"></span></div>
+    <div class="cancel-icon"><span class="fa fa-times"></span></div>
+    <%= form_tag(clubs_path, method: :get) do %>
+      <%= text_field_tag(:search, params[:search], placeholder: "Search for Club", class: "search-data") %>
+      <button type="submit" class="fa fa-search" style="color: black"></button>
+    <% end %>
+    <div class="nav-items-right">
+      <li><%= link_to 'Login', new_user_session_path %></li>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>        
+    </div>  
   <% end %>
-  </body>
+</nav>
+  
+</body>
 </html>
-<script>
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-    var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-    }
-  }
-</script>
