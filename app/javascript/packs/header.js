@@ -3,6 +3,15 @@ $(document).ready(function() {
   $(document).on('click', '.dropdown-menu', function (e) {
     $(this).find('#myDropdown').toggle();
   });
+  
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
 
   const menuBtn = document.querySelector(".menu-icon span");
   const searchBtn = document.querySelector(".search-icon");
@@ -29,3 +38,4 @@ $(document).ready(function() {
     cancelBtn.classList.add("show");
   }          
 });
+$(document).on('turbolinks:load', ready)
