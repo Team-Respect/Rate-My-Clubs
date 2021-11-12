@@ -6,7 +6,7 @@
   <%= javascript_pack_tag 'home' %>
 </head>
   <body>
-<nav>
+<nav class="header-nav">
   <div class="menu-icon"><span class="fa fa-bars"></span></div>
   <div class="logo"><%= link_to image_tag("favicon.ico"), root_path, method: :get %></div>
   <% if user_signed_in? %>  

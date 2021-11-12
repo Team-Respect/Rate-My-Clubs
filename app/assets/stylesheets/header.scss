@@ -85,6 +85,10 @@ nav .logo.space{
 }        
 
 /*STYLE*/
+.header-nav {
+  z-index: 100;
+}
+
 nav .nav-items{
   display: flex;
   flex: 1;
