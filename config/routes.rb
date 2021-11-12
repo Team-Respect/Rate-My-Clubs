@@ -9,21 +9,6 @@ Rails.application.routes.draw do
 
   resources :about
 
-  # Sign Up page route
-  get '/sign_up', to: "sign_up#index"
-
-  resources :sign_up
-
-  # Sign Up page route
-  get '/login', to: "login#index"
-
-  resources :login
-
-  # Forgot Password page route
-  get '/password/forgot', to: "password#index"
-
-  #resources :password
-
   # User authentication
   devise_for :users, controllers: {
     confirmations: 'confirmations'
