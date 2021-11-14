@@ -46,3 +46,26 @@
   margin: 0 auto;
   color: black;
 }
+
+/*Mobile Responsive - main box*/
+@media screen and(max-width:1140px) {
+  .setting-big-box {
+      width: 95%;
+      background-color: #929292;
+  }
+}
+
+@media screen and(max-width:1140px) {
+  .setting-main-box {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 40px;
+  }
+}
+
+/*Mobile Responsive - cancel box*/
+@media screen and(max-width:1140px) {
+  .setting-cancel-account-box {
+      width: 95%;
+  }
+}
