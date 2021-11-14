@@ -7,12 +7,18 @@
     <%= render @club.ratings %>
     <%= render 'ratings/form' %>
   <% else %>
-    <p>Looking to create a rating? You already created one! Users can only have one rating per club page.</p> <br />
+    <div id="prompt1">
+      <p>Looking to create a rating? You already created one! Users can only have one rating per club page.</p>
+    </div>
+    <br />
     <!-- Ratings -->
     <%= render @club.ratings %>  
     <% end %>
 <% else %>
-  <p>Sign in to create ratings.</p> <br />
+  <div id="prompt2">
+    <p>Sign in to create ratings.</p>
+  </div>
+  <br />
   <!-- Ratings -->
   <%= render @club.ratings %>  
 <% end %>
