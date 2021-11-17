@@ -4,34 +4,15 @@ Rails.application.routes.draw do
   # Home page route
   root "clubs#index"
 
-  get '/home', to: "clubs#index"
-
   # About page route
   get '/about', to: "about#index"
 
   resources :about
 
-  # Sign Up page route
-  get '/sign_up', to: "sign_up#index"
-
-  resources :sign_up
-
-  # Sign Up page route
-  get '/login', to: "login#index"
-
-  resources :login
-
-  # Forgot Password page route
-  get '/password/forgot', to: "password#index"
-
-  #resources :password
-
   # User authentication
   devise_for :users, controllers: {
     confirmations: 'confirmations'
   }
-
-  resources :home, only: [:index]
 
   # Clubs and Ratings
   resources :clubs do

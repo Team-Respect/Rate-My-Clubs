@@ -11,7 +11,7 @@ html {
   cursor: pointer;
 }
 
-/* Box that contains name and category in create club page */
+/* Box that contains name and category in create new club page */
 .create-club-box { 
   width: 900px;
   height: 290px;
@@ -564,4 +564,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Fixes bug that autoscrolls the star ratings when selected
+input[type="radio"] {
+  visibility:hidden;
+}
+
+/*Mobile Responsive - main box*/
+@media screen and(max-width:1140px) {
+  .create-club-box {
+      width: 95%;  
+  }
 }
