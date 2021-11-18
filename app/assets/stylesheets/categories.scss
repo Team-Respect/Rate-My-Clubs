@@ -1,8 +1,8 @@
-/* Box that contains name and catagory in create category page */
+/* Box that contains name and catagory in create new category page */
 .category-box { 
   width: 900px;
   height: 290px;
-  background-color: black;
+  background-color:black;
   color: white;
   margin: 0 auto;
   text-align: right;
@@ -228,6 +228,7 @@ a{
   .new-category-copyright{margin-top: 3.5%;}
 }
 
+
 @media only screen and (min-width: 750px) and (max-width: 900px) {
   .content-container{width: 75.5%; margin-left: -12.5%;}
   .category-name-display{padding: 1px;margin-top: -1%; margin-bottom: -1%;}
@@ -247,5 +248,12 @@ a{
   .view-categories{float: right; margin-right: 27%;margin-top: -1%;}
   .new-category-copyright{margin-top: 3.5%;}
   .new-category-background{padding-bottom: 10%;}
+}
+
+/*Mobile Responsive - main box*/
+@media screen and(max-width:1140px) {
+  .category-box {
+      width: 95%;  
+  }
 }
 
