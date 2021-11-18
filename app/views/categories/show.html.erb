@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class = "category-created-header">New Club Category Created!</h1>
+
 <div class="content-container">
-  <div class="home-background">
+  <div class="new-category-background">
     <div class="club-container">
       <div class ="category-column">
-        <p class="category-name-display"><%= @category.name %></p>
-        <p class= "category-description"><%= @category.description%></p>
-        <p class="spacer"> </p>
+        <p class="new-category-name-display"><%= @category.name %></p>
+        <p class= "new-category-description"><%= @category.description%></p>
       </div>
     </div>
   </div>
 </div>
-<div class="content-container">
-    <div class="home-background">
-      <p class="spacer"> </p>
-    </div>    
+  
 </div>
 <p class = "view-categories"><%= link_to 'View Categories', categories_path %></p>
-
 <p class="new-category-copyright">Copyrighted 2021</p>
 </div>
