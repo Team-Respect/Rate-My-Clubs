@@ -687,3 +687,9 @@ input[type="radio"] {
   visibility:hidden;
 }
 
+/*Mobile Responsive - main box*/
+@media screen and(max-width:1140px) {
+  .create-club-box {
+      width: 95%;  
+  }
+}
