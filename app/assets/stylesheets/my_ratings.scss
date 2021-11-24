@@ -23,17 +23,22 @@
 }
 
 .my-ratings-club-name-container {
-  width: 313px;
-  height: 86px;
+  position:relative;
+  width: 400px;
+  padding:35px;
+  left:50%;
+  transform: translate(-50%);
   background: #2e2e2e;
-  display: flex;
   align-items: center;
-  gap:10px;
+  text-align: center;
 }
-
 
 /*User's overall rating*/
 .my-overall-rating-box {
+  position:absolute;
+  left:5%;
+  top:50%;
+  transform:translateY(-50%);
   width: 56px;
   height: 56px;
   background: #ffffff;
@@ -42,9 +47,35 @@
   align-items: center;
 }
 
+
 //New ratings on club pages
 
 @media only screen and (max-width: 900px) {
+    /*Contains user ratings*/
+    .my-ratings-container {
+      position: relative;
+      width: 80%;
+      min-width:400px;
+      max-width: 600px;
+      height: 400px;
+      left:50%;
+      transform: translate(-50%);
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+      background: #2e2e2e;
+    }  
+      /*Contains a rating*/
+  .my-ratings-container .rating-rectangle {
+    display: flex;
+    position: relative;
+    width:90%;
+    height: 85%;
+    flex-basis: auto;
+    background: #acacac;
+  }
   /*Contains new rating form*/
   .new-rating-container {
     position: relative;
@@ -110,6 +141,31 @@
 } 
 
 @media only screen and (min-width: 901px) and (max-width: 1299px) {
+      /*Contains user ratings*/
+      .my-ratings-container {
+        position: relative;
+        width: 80%;
+        min-width:400px;
+        max-width: 600px;
+        height: 400px;
+        left:50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        background: #2e2e2e;
+      }
+        /*Contains a rating*/
+  .my-ratings-container .rating-rectangle {
+    display: flex;
+    position: relative;
+    width:90%;
+    height: 85%;
+    flex-basis: auto;
+    background: #acacac;
+  }
   /*Contains new rating form*/
   .new-rating-container {
     position: relative;
@@ -173,6 +229,31 @@
 } 
 
 @media only screen and (min-width: 1300px){
+  /*Contains user ratings*/
+  .my-ratings-container {
+    position: relative;
+    min-width: 843px;
+    width:60%;
+    height: 220px;
+    top: 10px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+   background: #2e2e2e;
+   }
+     /*Contains a rating*/
+  .my-ratings-container .rating-rectangle {
+    display: flex;
+    position: relative;
+    width:90%;
+    height: 155px;
+    flex-basis: auto;
+    background: #acacac;
+  }
   /*Contains new rating form*/
   .new-rating-container {
     position: absolute;
