@@ -1,28 +1,6 @@
 <!--This notice is for showing error message in rate this club-->
 <p id="notice1"><%= notice %></p>
 
-<% if user_signed_in? %>
-  <% if !@club.ratings.exists?(user_id: current_user.id) %>
-    <!-- Ratings -->
-    <%= render @club.ratings %>
-    <%= render 'ratings/form' %>
-  <% else %>
-    <div id="prompt1">
-      <p>Looking to create a rating? You already created one! Users can only have one rating per club page.</p>
-    </div>
-    <br />
-    <!-- Ratings -->
-    <%= render @club.ratings %>  
-    <% end %>
-<% else %>
-  <div id="prompt2">
-    <p>Sign in to create ratings.</p>
-  </div>
-  <br />
-  <!-- Ratings -->
-  <%= render @club.ratings %>  
-<% end %>
-
 <div class="club-overall-info-container">
 
   <div class="overall-rating-box">
@@ -75,6 +53,28 @@
     <br><br><br><br>Community
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <% if !@club.ratings.exists?(user_id: current_user.id) %>
+    <!-- Ratings -->
+    <%= render @club.ratings %>
+    <%= render 'ratings/form' %>
+  <% else %>
+    <div id="prompt1">
+      <p>Looking to create a rating? You already created one! Users can only have one rating per club page.</p>
+    </div>
+    <br />
+    <!-- Ratings -->
+    <%= render @club.ratings %>  
+    <% end %>
+<% else %>
+  <div id="prompt2">
+    <p>Sign in to create ratings.</p>
+  </div>
+  <br />
+  <!-- Ratings -->
+  <%= render @club.ratings %>  
+<% end %>
 
 <!-- Do not allow users to edit clubs -->
 <!--<%= link_to 'Edit', edit_club_path(@club) %> |-->
