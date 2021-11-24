@@ -31,16 +31,6 @@
   gap:10px;
 }
 
-//set minimum size for my ratings page
-.my-ratings-page{
-  top:100px;
-  width:100%;
-  min-width:1400px;
-  height:100%;
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
 /*User's overall rating*/
 .my-overall-rating-box {
@@ -52,77 +42,202 @@
   align-items: center;
 }
 
-
-
 //New ratings on club pages
 
-/*Contains new rating form at the top of the page*/
-.new-rating-container {
-  position:relative;
-  min-width: 843px;
-  width:60%;
-  height: 410px;
-  margin-left:30%;
-  margin-right: 20%;
-  top: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-  background: #2e2e2e;
-}
+@media only screen and (max-width: 900px) {
+  /*Contains new rating form*/
+  .new-rating-container {
+    position: relative;
+    min-width: 400px;
+    max-width:600px;
+    width:80%;
+    height: 600px;
+    left:50%;
+    transform: translate(-50%);
+    top:550px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
+  /*New rating form*/
+  .new-rating-container .new-rating-rectangle {
+    display: flex;
+    flex-direction:column;
+    width: 90%;
+    height:90%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    background: #acacac;
+  }
+  .new-rating-rectangle .general-rating-field{
+    display:flex;
+  
+    height:10%;
+    width: 90%;
+    //background: #680249;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+  }
+  
+  .new-rating-rectangle .rating-field{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height:50%;
+    width: 90%;
+    //background: #e4193b;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .new-rating-container .rating-description{
+  
+    width: 90%;
+    height:20%;
+    //background-color: aqua;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+} 
+
+@media only screen and (min-width: 901px) and (max-width: 1299px) {
+  /*Contains new rating form*/
+  .new-rating-container {
+    position: relative;
+    width:50%;
+    min-width: 450px;
+    height: 600px;
+    top:auto;
+    left:43%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
+  /*New rating form*/
+  .new-rating-container .new-rating-rectangle {
+    display: flex;
+    flex-direction:column;
+    width: 90%;
+    height:90%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    background: #acacac;
+  }
+  .new-rating-rectangle .general-rating-field{
+    display:flex;
+  
+    height:10%;
+    width: 90%;
+    //background: #680249;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+  }
+  
+  .new-rating-rectangle .rating-field{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height:50%;
+    width: 90%;
+    //background: #e4193b;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .new-rating-container .rating-description{
+  
+    width: 90%;
+    height:20%;
+    //background-color: aqua;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+} 
+
+@media only screen and (min-width: 1300px){
+  /*Contains new rating form*/
+  .new-rating-container {
+    position: absolute;
+    min-width: 843px;
+    width:60%;
+    height: 410px;
+    margin-left:35%;
+    margin-right: 20%;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
+  /*New rating form*/
+  .new-rating-container .new-rating-rectangle {
+    display: flex;
+    flex-direction:column;
+    min-width: 712px;
+    width: 90%;
+    height:350px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    background: #acacac;
+  }
+  .new-rating-rectangle .general-rating-field{
+    display:flex;
+  
+    height:18%;
+    width: 90%;
+    //background: #680249;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+  }
+  
+  .new-rating-rectangle .rating-field{
+    display:flex;
+    align-items: center;
+  
+    height:20%;
+    width: 90%;
+    //background: #e4193b;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .new-rating-container .rating-description{
+  
+    width: 90%;
+    height:30%;
+    //background-color: aqua;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}  
 
 
-/*New rating form*/
-.new-rating-container .new-rating-rectangle {
-  display: flex;
-  flex-direction:column;
-  min-width: 712px;
-  width: 90%;
-  height:350px;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  gap:10px;
-  background: #acacac;
-}
-
-.new-rating-rectangle .general-rating-field{
-  display:flex;
-
-  height:18%;
-  width: 90%;
-  //background: #680249;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap:10px;
-}
-
-.new-rating-rectangle .rating-field{
-  display:flex;
-  align-items: center;
-
-  height:20%;
-  width: 90%;
-  //background: #e4193b;
-  justify-content: center;
-  align-content: center;
-}
-
-.new-rating-container .rating-description{
-
-  width: 90%;
-  height:30%;
-  //background-color: aqua;
-  justify-content: center;
-  display:flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-//not working
 .rating-description .rating-description-border{
   width: 100%;
   height: 100%;
