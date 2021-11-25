@@ -15,59 +15,69 @@
   text-align: center;
 }
 
-.my-ratings-club-name {
-
-  font-size: 25px;
-  color: #ffffff;
-  left:30%;
+.my-ratings-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 35% 65%;
+  background-color: green;
 }
 
 .my-ratings-club-name-container {
-  position:relative;
-  width: 400px;
-  padding:35px;
-  left:50%;
-  transform: translate(-50%);
+  margin-left: 40%;
+  margin-right: 40%;
   background: #2e2e2e;
   align-items: center;
   text-align: center;
 }
 
+.my-ratings-club-name {
+  font-size: 25px;
+  color: #ffffff;
+  margin: 5%;
+}
+
 /*User's overall rating*/
 .my-overall-rating-box {
-  position:absolute;
-  left:5%;
-  top:50%;
-  transform:translateY(-50%);
   width: 56px;
   height: 56px;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 25%;
 }
 
 
-//New ratings on club pages
-
+// New ratings on club pages
 @media only screen and (max-width: 900px) {
-    /*Contains user ratings*/
-    .my-ratings-container {
-      position: relative;
-      width: 80%;
-      min-width:400px;
-      max-width: 600px;
-      height: 400px;
-      left:50%;
-      transform: translate(-50%);
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-evenly;
-      background: #2e2e2e;
-    }  
-      /*Contains a rating*/
+
+  .my-ratings-club-name-container {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .my-ratings-club-name {
+    font-size: 18px;
+  }
+
+  /*Contains user ratings*/
+  .my-ratings-container {
+    position: relative;
+    width: 80%;
+    min-width:400px;
+    max-width: 600px;
+    height: 400px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }  
+
+  /*Contains a rating*/
   .my-ratings-container .rating-rectangle {
     display: flex;
     position: relative;
@@ -121,7 +131,7 @@
     display:flex;
     align-items: center;
     flex-direction: column;
-    height:50%;
+    height: 50%;
     width: 90%;
     //background: #e4193b;
     justify-content: center;
@@ -141,23 +151,34 @@
 } 
 
 @media only screen and (min-width: 901px) and (max-width: 1299px) {
-      /*Contains user ratings*/
-      .my-ratings-container {
-        position: relative;
-        width: 80%;
-        min-width:400px;
-        max-width: 600px;
-        height: 400px;
-        left:50%;
-        transform: translate(-50%);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-evenly;
-        background: #2e2e2e;
-      }
-        /*Contains a rating*/
+
+  .my-ratings-club-name-container {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+
+  .my-ratings-club-name {
+    font-size: 22px;
+  }
+
+  /*Contains user ratings*/
+  .my-ratings-container {
+    position: relative;
+    width: 80%;
+    min-width:400px;
+    max-width: 600px;
+    height: 400px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
+
+  /*Contains a rating*/
   .my-ratings-container .rating-rectangle {
     display: flex;
     position: relative;
@@ -166,6 +187,7 @@
     flex-basis: auto;
     background: #acacac;
   }
+
   /*Contains new rating form*/
   .new-rating-container {
     position: relative;
@@ -181,6 +203,7 @@
     justify-content: space-evenly;
     background: #2e2e2e;
   }
+
   /*New rating form*/
   .new-rating-container .new-rating-rectangle {
     display: flex;
@@ -193,6 +216,7 @@
     gap:10px;
     background: #acacac;
   }
+  
   .new-rating-rectangle .general-rating-field{
     display:flex;
   
@@ -243,9 +267,9 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-   background: #2e2e2e;
-   }
-     /*Contains a rating*/
+    background: #2e2e2e;
+  }
+  /*Contains a rating*/
   .my-ratings-container .rating-rectangle {
     display: flex;
     position: relative;
