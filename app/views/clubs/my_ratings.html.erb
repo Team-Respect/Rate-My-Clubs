@@ -13,7 +13,7 @@
       <% if club.ratings.exists?(user_id: current_user.id) %>
 
         <!-- Club overall_rating and Club name -->
-        <div class="my-ratings-club-name-container">
+        <div class="my-ratings-club-name-container my-ratings-row">
           <div class="my-overall-rating-box">
             <%= club.overall_rating %>
           </div>
@@ -84,7 +84,6 @@
         <% if hasRating == false %>
           <% hasRating = true %>
         <% end %>
-
       <% end %>
     <% end %>
 
