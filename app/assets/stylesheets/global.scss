@@ -1,0 +1,24 @@
+/* SCSS for all pages */
+
+// Every selector has the same font-family and box-sizing
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+// Page background color
+html {
+  background-color: rgb(146, 146, 146);
+}
+
+// All title of pages
+h1 {
+  color: black;
+}
+
+// Needed for spacing after the navbar (top of each page)
+// Or else h1s will overlap navbar
+body {
+  margin: 0;
+  padding-top: 70px;
+}

@@ -2,15 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-/* Temporary(?) background color until selectors get fixed */
-html {
-  background-color: rgb(146, 146, 146);
-}
-
-.clubs-tr {
-  cursor: pointer;
-}
-
+/* Clubs form */
 /* Box that contains name and category in create new club page */
 .create-club-box { 
   width: 900px;
@@ -44,345 +36,16 @@ html {
 /* Headers in club and category pages */
 .category-club-header {
   text-align: center;
-  color: black;
 }
 
-// Home page
-
-// Club listing
-.home-main-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 95% 25%;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: -16%;
-}
-
-.home-no-clubs {
-  padding: 5%;
-  margin-bottom: 10%;
-  text-align: center;
-  background-color: black;
-}
-
-.home-no-clubs-text {
-  padding: 5%;
-  background-color: gray;
-  // By default, it should be black.
-  color: black;
-  font-size: 1.5rem;
-}
-
-.home-row {
-  display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-}
-
-.home-col {
-  align-items: center;
-}
-
-.home-page-h1 {
-  padding: 20px;
-  margin-top: 0px;
-  text-align: center;
-  font-size: 40px;
-  color: black;
-}
-
-.home-content-container {
-  position: relative;
-  align-items: center;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-bottom: 0%;
-  background-color: black;
-  height: fit-content;
-  z-index: 0;
-
-  
-}
-
-.home-club-container {
-  margin: 2.5%;
-  background-color: gray;
-
-}
-
-.home-ratings-column {
-  // Keep for testing purposes
-  //background-color: green;
-  padding: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
-  align-items: center;
-}
-
-.home-overall-rating-container {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: white;
-  justify-content: center;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  margin: 10%;
-  height: 100px;
-  width: 100px;
-  z-index: 0;
-}
-
-.home-overall-rating {
-  // Keep for testing purposes
-  //background-color: red;
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-  // Increasing the padding shifts number to the left
-  //padding: 0;
-  align-items: center;
-  z-index: 0;
-}
-
-.home-number-rating {
-  color: black;
-  margin-left: -30%;
-  margin-top: 10%;
-  font-size: 1.25rem;
-  white-space: nowrap;
-}
-
-.home-club-info-column {
-  // Keep for testing purposes
-  //background-color: red;
-}
-
-.home-club-name {
-  position: relative;
-  white-space: nowrap;
-  margin: -55px 0px 0px -10%;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: black;
-  z-index: 0;
-}
-
-.home-category-name {
-  position: relative;
-  margin: 5px 0px 0px -10%;
-  color: black;
-  font-size: 1.25rem;
-  white-space: nowrap;
-
-}
-
-.home-other-ratings-column {
-  display: grid;
-  justify-content: center;
-  // Keep for testing purposes
-  //background-color: blue;
-  align-items: center;
-  text-align: center;
-}
-
-.home-rating {
-  text-align: center;
-  background-color: white;
-  width: 30px;
-  height: 30px;
-  margin: 0px 10px 5px 0px;
-  padding: 5px 0px 0px 0px;}
-
-.home-rating-metric {
-  margin: 7.5px 70px 5px 0px;
-  position: relative;
-  color: black;
-  white-space: nowrap;
-}
-
-.home-other-ratings-metric-row {
-  display: flex;
-}
-
-// Category tab
-.home-category-list {
-  // Can't make category tab fixed in grid
-  margin-left: 7.5%;
-  z-index: 1;
-  margin-bottom: -10%;
-}
-
-.home-category-background {
-  background-color: black;
-  margin: 0px;
-  padding: 5px;
-  width: 200px;
-  height: auto;
-}
-
-.home-category-heading {
-  background-color: gray;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
-  margin: 10px;
-  color: black;
-}
-
-.home-category-input {
-  cursor: pointer;
-}
-
-.home-category-label {
-  font-size: 1.25rem;
-  color: black;
-
-}
-
-.home-category-container {
-  background-color: gray;
-  padding: 5%;
-  margin: 5%;
-}
-
-// Footer
-.home-copyright {
-  text-align: center;
-  position: sticky;
-  margin-top: 2%;
-  color: black;
-} 
-
-.home-page-row{
-  display: flex;
-  flex-direction: row;
-}
-.home-page-column{
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 750px) {
-  .home-page-row{display: flex; flex-direction: column;}
-  .home-main-container{width: 100%; margin-left: 2.5%; margin-top: 15%; margin-right: 0%;}
-  .home-club-name {font-size: 18px; margin-left: -25.5%; margin-top: -10%;}
-  .home-category-name{font-size: 14px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -25.5%; font-size: 12px;}
-  .home-overall-rating-container {height: 50px; width: 50px;}
-  .home-overall-rating{font-size: 18px;}
-  .home-rating{height: auto; width: auto; margin-left: 20%; margin-top: 2.5%; font-size: 10px;padding: 1%;}
-  .home-rating-metric{font-size: 10px; margin-top: 5%;}
-  .home-category-list{margin-left: 2.5%; margin-top: -5%;}
-  .home-category-background{width: 97.5%; margin-top: 0%;}
-  .home-category-label{font-size: 14px;}
-  .home-category-container{padding: 2%; margin: 2.5%;}
-  .home-category-heading{font-size: 16px;}
-}
-@media only screen and (min-width: 751px) and (max-width: 900px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 16px; margin-left: -10%; margin-top: -25%;}
-  .home-category-name{font-size: 14px; margin-left: -10%;}
-  .home-number-rating{margin-left: 5%; font-size: 14px;}
-  .home-overall-rating-container {height: 75px; width: 75px;}
-  .home-overall-rating{font-size: 18px;;}
-  .home-rating{height: auto; width: auto; margin-left: 10%; margin-top: 2.5%; font-size: 14px;padding: 2% 1% 1% 1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-@media only screen and (min-width: 901px) and (max-width: 1050px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 20px; margin-left: -15%; margin-top: -20%;}
-  .home-category-name{font-size: 16px; margin-left: -15%;}
-  .home-number-rating{margin-left: 5%; font-size: 1px;}
-  .home-overall-rating-container {height: 75px; width: 75px;}
-  .home-overall-rating{font-size: 18px;;}
-  .home-rating{height: auto; width: auto; margin-left: 5%; margin-top: 2.5%; font-size: 14px;padding: 2% 1% 1% 1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-@media only screen and (min-width: 1051px) and (max-width: 1200px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 22px; margin-left: -25.5%; margin-top: -20%;}
-  .home-category-name{font-size: 18px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -25.5%; font-size: 14px;}
-  .home-overall-rating-container {height: 75px; width: 75px;}
-  .home-overall-rating{font-size: 22px;;}
-  .home-rating{height: auto; width: auto; margin-left: 5%; margin-top: 2.5%; font-size: 14px;padding: 2% 1% 1% 1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-@media only screen and (min-width: 1201px) and (max-width: 1350px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 22px; margin-left: -25.5%; margin-top: -20%;}
-  .home-category-name{font-size: 18px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -25.5%; font-size: 14px;}
-  .home-overall-rating-container {height: 75px; width: 75px;}
-  .home-overall-rating{font-size: 22px;;}
-  .home-rating{height: auto; width: auto; margin-left: 5%; margin-top: 2.5%; font-size: 14px;padding: 2% 1% 1% 1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-@media only screen and (min-width: 1351px) and (max-width: 1500px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 22px; margin-left: -25.5%; margin-top: -18%;}
-  .home-category-name{font-size: 18px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -25.5%; font-size: 18px;}
-  .home-overall-rating-container {height: 90px; width: 90px;}
-  .home-overall-rating{font-size: 24px;;}
-  .home-rating{height: auto; width: auto; margin-left: 5%; margin-top: 2.5%; font-size: 14px;padding:1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-@media only screen and (min-width: 1501px) and (max-width: 1650px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 24px; margin-left: -25.5%; margin-top: -18%;}
-  .home-category-name{font-size: 18px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -25.5%; font-size: 18px;}
-  .home-overall-rating-container {height: 90px; width: 90px;}
-  .home-overall-rating{font-size: 24px;;}
-  .home-rating{height: auto; width: auto; margin-left: 5%; margin-top: 2.5%; font-size: 18px;padding: 1%;}
-  .home-rating-metric{font-size: 14px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-@media only screen and (min-width: 1651px){
-  .home-main-container{width: 70%; margin-left: 5%; margin-top: -2%; margin-right: 0%;}
-  .home-club-name {font-size: 26px; margin-left: -25.5%; margin-top: -15%;}
-  .home-category-name{font-size: 18px; margin-left: -25.5%;}
-  .home-number-rating{margin-left: -30%; font-size: 18px;}
-  .home-overall-rating-container {height: 100px; width: 100px;}
-  .home-overall-rating{font-size: 26px;;}
-  .home-rating{height: auto; width: auto; margin-left: -20%; margin-top: 2.5%; font-size: 18px;padding: 1%;}
-  .home-rating-metric{font-size: 18px; margin-top: 5%;}
-  .home-category-list{margin-left: 5%;}
-  .home-category-label{font-size: 16px;}
-}
-
-
-
+// Clubs - show.html.erb
 @media only screen and (min-width: 1300px) {
 
   /*Contains all overall rating info*/
   .club-overall-info-container {
     position: absolute;
     min-width: 350px;
-    width:20%;
+    width: 20%;
     height: 462px;
     left: 49px;
     top: 156px;
@@ -390,11 +53,12 @@ html {
     background: #292929;
   }
 
+  // Rating's form partial - app/views/ratings/_rating.html.erb
   /*Contains user ratings*/
   .ratings-container {
     position: relative;
     min-width: 843px;
-    width:60%;
+    width: 60%;
     height: 220px;
     margin-left:35%;
     top: auto;
@@ -410,10 +74,9 @@ html {
     display: flex;
     position: relative;
     min-width: 712px;
-    width:90%;
+    width: 90%;
     min-height: 155px;
     flex-basis: auto;
-
     background: #acacac;
   }
 
@@ -444,6 +107,8 @@ html {
     justify-content: center;
     align-items: center;
   }
+
+  // Clubs - show.html.erb
   /*Box for overall rating*/
   .club-overall-info-container .overall-rating-box {
     position: absolute;
@@ -526,7 +191,7 @@ html {
     left: 18%;
     top: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name2 {
@@ -534,7 +199,7 @@ html {
     left: 18%;
     top: 45%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name3 {
@@ -542,48 +207,49 @@ html {
     left: 18%;
     bottom: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
 }
 
 @media only screen and (max-width: 900px) {
-    .club-page{
-      height: 100%;
-      width:100%;
-    }
-    .club-overall-info-container {
-      position: absolute;
-      width: 350px;
-      height: 462px;
-      top:150px;
-      left:50%;
-      margin-left: -175px;
-      background: #292929;
-    }
 
-    /*Contains user ratings*/
-    .ratings-container {
-      position: relative;
-      width: 80%;
-      min-width:400px;
-      max-width: 600px;
-      height: 400px;
-      top: 550px;
-      left:50%;
-      transform: translate(-50%);
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-evenly;
-      background: #2e2e2e;
-    }
+  .club-page{
+    height: 100%;
+    width:100%;
+  }
+  .club-overall-info-container {
+    position: absolute;
+    width: 350px;
+    height: 462px;
+    top: 150px;
+    left: 50%;
+    margin-left: -175px;
+    background: #292929;
+  }
+
+  /*Contains user ratings*/
+  .ratings-container {
+    position: relative;
+    width: 80%;
+    min-width:400px;
+    max-width: 600px;
+    height: 400px;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
 
   /*Contains a rating*/
   .ratings-container .rating-rectangle {
     display: flex;
     position: relative;
-    width:90%;
+    width: 90%;
     height: 85%;
     flex-basis: auto;
     background: #acacac;
@@ -701,7 +367,7 @@ html {
     top: 9%;
     left: 37.5%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name2 {
@@ -709,7 +375,7 @@ html {
     left: 37.5%;
     top: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name3 {
@@ -717,7 +383,7 @@ html {
     left: 37.5%;
     top: 25%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }  
 }
 
@@ -730,8 +396,8 @@ html {
     position: absolute;
     width: 350px;
     height: 462px;
-    top:150px;
-    left:20%;
+    top: 150px;
+    left: 20%;
     margin-left: -175px;
     background: #292929;
   }
@@ -743,7 +409,7 @@ html {
       width:50%;
       height: 400px;
       top: auto;
-      left:43%;
+      left: 43%;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -756,7 +422,7 @@ html {
 .ratings-container .rating-rectangle {
   display: flex;
   position: relative;
-  width:90%;
+  width: 90%;
   height: 90%;
   flex-basis: auto;
   background: #acacac;
@@ -874,7 +540,7 @@ html {
   top: 11%;
   left: 37.5%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }
 
 .rating-rectangle .rating-metric-name2 {
@@ -882,7 +548,7 @@ html {
   left: 37.5%;
   top: 18.5%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }
 
 .rating-rectangle .rating-metric-name3 {
@@ -890,12 +556,9 @@ html {
   left: 37.5%;
   top: 26%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }  
 }
-
-
-
 
 /*Overall rating text*/
 .overall-rating {
@@ -910,7 +573,7 @@ html {
   left: 40%;
   top: 11%;
   font-size: 20px;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /*Rating Metric Box*/
@@ -972,12 +635,12 @@ html {
 
 // Fixes bug that autoscrolls the star ratings when selected
 input[type="radio"] {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 /*Mobile Responsive - main box*/
 @media screen and(max-width:1140px) {
   .create-club-box {
-      width: 95%;  
+    width: 95%;  
   }
 }
