@@ -45,7 +45,7 @@
   .club-overall-info-container {
     position: absolute;
     min-width: 350px;
-    width:20%;
+    width: 20%;
     height: 462px;
     left: 49px;
     top: 156px;
@@ -53,11 +53,12 @@
     background: #292929;
   }
 
+  // Rating's form partial - app/views/ratings/_rating.html.erb
   /*Contains user ratings*/
   .ratings-container {
     position: relative;
     min-width: 843px;
-    width:60%;
+    width: 60%;
     height: 220px;
     margin-left:35%;
     top: auto;
@@ -73,10 +74,9 @@
     display: flex;
     position: relative;
     min-width: 712px;
-    width:90%;
+    width: 90%;
     min-height: 155px;
     flex-basis: auto;
-
     background: #acacac;
   }
 
@@ -107,6 +107,8 @@
     justify-content: center;
     align-items: center;
   }
+
+  // Clubs - show.html.erb
   /*Box for overall rating*/
   .club-overall-info-container .overall-rating-box {
     position: absolute;
@@ -189,7 +191,7 @@
     left: 18%;
     top: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name2 {
@@ -197,7 +199,7 @@
     left: 18%;
     top: 45%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name3 {
@@ -205,48 +207,49 @@
     left: 18%;
     bottom: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
 }
 
 @media only screen and (max-width: 900px) {
-    .club-page{
-      height: 100%;
-      width:100%;
-    }
-    .club-overall-info-container {
-      position: absolute;
-      width: 350px;
-      height: 462px;
-      top:150px;
-      left:50%;
-      margin-left: -175px;
-      background: #292929;
-    }
 
-    /*Contains user ratings*/
-    .ratings-container {
-      position: relative;
-      width: 80%;
-      min-width:400px;
-      max-width: 600px;
-      height: 400px;
-      top: 550px;
-      left:50%;
-      transform: translate(-50%);
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-evenly;
-      background: #2e2e2e;
-    }
+  .club-page{
+    height: 100%;
+    width:100%;
+  }
+  .club-overall-info-container {
+    position: absolute;
+    width: 350px;
+    height: 462px;
+    top: 150px;
+    left: 50%;
+    margin-left: -175px;
+    background: #292929;
+  }
+
+  /*Contains user ratings*/
+  .ratings-container {
+    position: relative;
+    width: 80%;
+    min-width:400px;
+    max-width: 600px;
+    height: 400px;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+  }
 
   /*Contains a rating*/
   .ratings-container .rating-rectangle {
     display: flex;
     position: relative;
-    width:90%;
+    width: 90%;
     height: 85%;
     flex-basis: auto;
     background: #acacac;
@@ -364,7 +367,7 @@
     top: 9%;
     left: 37.5%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name2 {
@@ -372,7 +375,7 @@
     left: 37.5%;
     top: 17%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }
   
   .rating-rectangle .rating-metric-name3 {
@@ -380,7 +383,7 @@
     left: 37.5%;
     top: 25%;
     font-size: 13px;
-    color:#000000;
+    color: #000000;
   }  
 }
 
@@ -393,8 +396,8 @@
     position: absolute;
     width: 350px;
     height: 462px;
-    top:150px;
-    left:20%;
+    top: 150px;
+    left: 20%;
     margin-left: -175px;
     background: #292929;
   }
@@ -406,7 +409,7 @@
       width:50%;
       height: 400px;
       top: auto;
-      left:43%;
+      left: 43%;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -419,7 +422,7 @@
 .ratings-container .rating-rectangle {
   display: flex;
   position: relative;
-  width:90%;
+  width: 90%;
   height: 90%;
   flex-basis: auto;
   background: #acacac;
@@ -537,7 +540,7 @@
   top: 11%;
   left: 37.5%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }
 
 .rating-rectangle .rating-metric-name2 {
@@ -545,7 +548,7 @@
   left: 37.5%;
   top: 18.5%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }
 
 .rating-rectangle .rating-metric-name3 {
@@ -553,12 +556,9 @@
   left: 37.5%;
   top: 26%;
   font-size: 13px;
-  color:#000000;
+  color: #000000;
 }  
 }
-
-
-
 
 /*Overall rating text*/
 .overall-rating {
@@ -573,7 +573,7 @@
   left: 40%;
   top: 11%;
   font-size: 20px;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /*Rating Metric Box*/
@@ -635,12 +635,12 @@
 
 // Fixes bug that autoscrolls the star ratings when selected
 input[type="radio"] {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 /*Mobile Responsive - main box*/
 @media screen and(max-width:1140px) {
   .create-club-box {
-      width: 95%;  
+    width: 95%;  
   }
 }
