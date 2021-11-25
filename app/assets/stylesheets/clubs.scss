@@ -49,7 +49,6 @@
     height: 462px;
     left: 49px;
     top: 156px;
-
     background: #292929;
   }
 
@@ -388,10 +387,11 @@
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1299px) {
-  .club-page{
+  .club-page {
     height: 100%;
     width:100%;
   }
+
   .club-overall-info-container {
     position: absolute;
     width: 350px;
