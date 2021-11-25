@@ -3,67 +3,72 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .signup {
-    margin: 20px auto;
-    padding-bottom: 25px;
-    width: 343px; 
-    height:auto;
-    -webkit-border-radius: 8px/7px; 
-    -moz-border-radius: 8px/7px; 
-    border-radius: 8px/7px; 
-    background-color: black; 
-    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-    border: solid 1px #cbc9c9;
-    color: white;
+  margin: 20px auto;
+  padding-bottom: 25px;
+  width: 343px; 
+  height:auto;
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color: black; 
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+  color: white;
+  text-align: center;
 }
-body
-{
+
+body {
   color: #4c4c4c;
 }
+
 .signup_title {
-    font-size: 32px;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: 10px;
-  }
-.new_user{
-    margin: 0 30px;
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
+
+.new_user {
+  margin: 0 30px;
+}
+
 .field {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
+
 input[type=text], input[type=password], input[type=email]  {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    font-size: 16px;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
 }
 
 input[type=text], input[type=password], input[type=email]:focus {
-    background-color: #ddd;
-    outline: none;
-    font-size: 16px;
+  background-color: #ddd;
+  outline: none;
+  font-size: 16px;
 }
 .alreadyhaveaccount {
-    padding-left: 100px;
-    position: relative;
-    top: 3%;
-    left: 2%;
-    color: white;
-    font-size: 16px;
+  position: relative;
+  top: 3%;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 5%;
 }
+
 .signupbutton {
-    position: relative;
-    left: 18%;
-    padding: 5px 60px 5px 60px;
-    font-size: 16px;
+  position: relative;
+  padding: 5px 60px 5px 60px;
+  font-size: 16px;
+  margin-bottom: 5%;
 }
 
 div.signupbutton:hover {
@@ -73,6 +78,7 @@ div.signupbutton:hover {
   box-shadow: none;
   
 }
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
@@ -82,4 +88,9 @@ div.signupbutton:hover {
 
 .confirm-actions {
   text-align: center;
+}
+
+// For Resend Confirmations Page
+.resend-confirmations {
+  margin: 5%;
 }
