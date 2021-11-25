@@ -3,13 +3,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .about-header {
-    font-size: 3.5rem;
-    text-align: center;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 .about-button {
-    text-align: center;
-    padding-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .about-sentence {
@@ -24,89 +24,89 @@
 }
 
 .about-column {
-    width: 20%;
-    float: left;
-    padding: 30px 10px;
+  width: 20%;
+  float: left;
+  padding: 30px 10px;
 }
 
 .about-row::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .about-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 200px;
-    margin: auto;
-    background-color: grey;
-    text-align: center;
-    border-radius: 40px;
-    padding-bottom: 15px;
-    color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 200px;
+  margin: auto;
+  background-color: grey;
+  text-align: center;
+  border-radius: 40px;
+  padding-bottom: 15px;
+  color: white;
 }
 
 .about-copyright {
-    color: black;
-    font-size: 1rem;
-    text-align: center;
-    padding: 20px;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
 }
 
 .about-links {
-    text-align: center;
+  text-align: center;
 }
 
 /*Mobile Responsive - Name Tags*/
 @media screen and(max-width:600px) {
-    .about-column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  .about-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 /*Mobile Responsive - Box and Sentences*/
 @media screen and(max-width:1140px) {
-    .about-sentence {
-        width: 80%;
-        height: 260px;
-        margin-bottom: 20px;
-        background-color: black;
-    }
+  .about-sentence {
+    width: 80%;
+    height: 260px;
+    margin-bottom: 20px;
+    background-color: black;
+  }
 }
 
 @media screen and(max-width:800px) {
-    .about-sentence {
-        width: 95%;
-        height: 270px;
-        margin-bottom: 20px;
-        background-color: black;
-    }
+  .about-sentence {
+    width: 95%;
+    height: 270px;
+    margin-bottom: 20px;
+    background-color: black;
+  }
 }
 
 @media (max-width:700px) {
-    .about-sentence {
-        width: 95%;
-        height: 290px;
-        margin-bottom: 20px;
-        background-color: black;
-    }
+  .about-sentence {
+    width: 95%;
+    height: 290px;
+    margin-bottom: 20px;
+    background-color: black;
+  }
 }
 
 @media (max-width:600px) {
-    .about-sentence {
-        width: 95%;
-        height: 300px;
-        margin-bottom: 20px;
-        background-color: black;
-    }
+  .about-sentence {
+    width: 95%;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: black;
+  }
 }
 
 @media (max-width:500px) {
-    .about-sentence {
-        width: 95%;
-        height: 350px;
-        margin-bottom: 20px;
-        background-color: black;
-    }
+  .about-sentence {
+    width: 95%;
+    height: 350px;
+    margin-bottom: 20px;
+    background-color: black;
+  }
 }
