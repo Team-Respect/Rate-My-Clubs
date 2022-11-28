@@ -20,7 +20,7 @@ Like Rate My Professors, but with clubs! This web service allows users to create
 - **Habit:** This app could be used as often or unoften as the user wants. Users who are not logged in can view clubs, but cannot create ratings.
 
 ## Deployment
-The web service was deployed on Heroku, but the free tier was removed. Below are the demo gifs instead.\
+The web service was deployed on Heroku, but the free tier was removed. Below are the demo gifs instead.
 ### Desktop Demo
 <img src="demo-desktop.gif">
 
