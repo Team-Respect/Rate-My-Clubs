@@ -23,6 +23,7 @@ Like Rate My Professors, but with clubs! This web service allows users to create
 The web service was deployed on Heroku, but the free tier was removed. Below are the demo gifs instead.\
 ### Desktop Demo
 <img src="demo-desktop.gif">
+
 ### Mobile Demo
 <img src="demo-mobile.gif">
 
