@@ -20,9 +20,11 @@ Like Rate My Professors, but with clubs! This web service allows users to create
 - **Habit:** This app could be used as often or unoften as the user wants. Users who are not logged in can view clubs, but cannot create ratings.
 
 ## Deployment
-The web service is deployed on Heroku.\
-NOTE: It takes around 15-20 seconds for it's initial load.\
-Deployment Link: [https://lit-savannah-91482.herokuapp.com/](https://lit-savannah-91482.herokuapp.com/)
+The web service was deployed on Heroku, but the free tier was removed. Below are the demo gifs instead.\
+### Desktop Demo
+<img src="demo-desktop.gif">
+### Mobile Demo
+<img src="demo-mobile.gif">
 
 ## Installation
 ### Requirements
